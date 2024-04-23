@@ -42,20 +42,20 @@ export default function Header({ changeSection }) {
                 <div className="flex">
 
                 {/* Just benSpooner */}
-                <a href={textOptions[textIndex].url} className="font-gopher-mono-semi" onClick={() => changeSection(textOptions[textIndex].sectionId)}>
+                {/* <a href={textOptions[textIndex].url} className="font-gopher-mono-semi" onClick={() => changeSection(textOptions[textIndex].sectionId)}>
                     {textOptions[textIndex].text}
-                </a>
+                </a> */}
                   
                   {/* benSpooner with pktT */}
-                  {/* <Arrow direction="left" onClick={() => changeWebsite("left")} width={20} height={20} /> */}
-                  {/* <div className="flex flex-col w-full text-center xl:text-right px-2"> */}
+                  <Arrow direction="left" onClick={() => changeWebsite("left")} width={20} height={20} />
+                  <div className="flex flex-col w-full text-center xl:text-right px-2">
                     {/* benSpooner or pktT */}
-                      {/* <a href={textOptions[textIndex].url} className="font-gopher-mono-semi" onClick={() => changeSection(textOptions[textIndex].sectionId)}> */}
-                        {/* {textOptions[textIndex].text} */}
-                      {/* </a> */}
-                      {/* <Breadcrumb currentIndex={textIndex} itemCount={textOptions.length} onBreadcrumbClick={setTextIndex}/> */}
-                  {/* </div> */}
-                  {/* <Arrow direction="right" onClick={() => changeWebsite("right")} width={20} height={20} /> */}
+                      <a href={textOptions[textIndex].url} className="font-gopher-mono-semi" onClick={() => changeSection(textOptions[textIndex].sectionId)}>
+                        {textOptions[textIndex].text}
+                      </a>
+                      <Breadcrumb currentIndex={textIndex} itemCount={textOptions.length} onBreadcrumbClick={setTextIndex}/>
+                  </div>
+                  <Arrow direction="right" onClick={() => changeWebsite("right")} width={20} height={20} />
 
                 </div>
               </div>
