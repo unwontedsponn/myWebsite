@@ -2,6 +2,7 @@ import Section from '../reusableComponents/sectionsAndElements/Section';
 import SmallScreenSection from '../reusableComponents/sectionsAndElements/SmallScreenSection';
 import LargeScreenSection from '../reusableComponents/sectionsAndElements/LargeScreenSection';
 import SlideFadeIn from '../reusableComponents/SlideFadeIn';
+import Image from 'next/image';
 import TypewriterEffect from '../reusableComponents/TypewriterEffect';
 import YouTubeVideo from '../reusableComponents/YouTubeVideo';
 
@@ -12,11 +13,6 @@ export default function Game() {
       <SmallScreenSection>
         <SlideFadeIn direction="right" className="color-blue font-gopher-mono-semi leading-none text-8xl sm:text-9xl"><p className="opacity-40">myGame</p></SlideFadeIn>
         <SlideFadeIn direction="left" className="color-dark-blue font-gopher-mono underline text-decoration-color text-2xl px-10 tracking-largep text-center max-w-4xl"><p className="">This game is not designed to run on your device. To play, please view on a larger screen.</p></SlideFadeIn>
-
-        {/* Gif on smallest screen */}
-        <SlideFadeIn direction="up">
-          <img src="images/ktma gif.gif" alt="" className="sm:hidden border-3 border-thick-border-gray"/>
-        </SlideFadeIn>
 
         {/* Video on small screen and up */}
         <SlideFadeIn direction="up">
