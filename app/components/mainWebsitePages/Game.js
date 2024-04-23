@@ -2,7 +2,6 @@ import Section from '../reusableComponents/sectionsAndElements/Section';
 import SmallScreenSection from '../reusableComponents/sectionsAndElements/SmallScreenSection';
 import LargeScreenSection from '../reusableComponents/sectionsAndElements/LargeScreenSection';
 import SlideFadeIn from '../reusableComponents/SlideFadeIn';
-import Image from 'next/image';
 import TypewriterEffect from '../reusableComponents/TypewriterEffect';
 import YouTubeVideo from '../reusableComponents/YouTubeVideo';
 
@@ -21,12 +20,12 @@ export default function Game() {
         
         <p className="hidden sm:px-24 sm:text-xs font-gopher-mono">Keep The Music Alive tells the story of a budding composer, eager to make his mark. To pass each level he must keep moving, overcoming obstacles to finish writing his masterpiece. This retro 2D platform game features a stunning Contemporary Jazz/Classical soundtrack by award winning artist Sponn, which the player shapes in real-time as they play, blurring the boundaries between being a listener and an active creator of this mini album.
 
-        How To Play: To keep the music alive you must overcome the obstacles in your path, by jumping over them, or moving around them. Simple right? Not really, you'll see... 
+        How To Play: To keep the music alive you must overcome the obstacles in your path, by jumping over them, or moving around them. Simple right? Not really, you&apos;ll see... 
 
         Jump = SPACE BAR 
         Left/Right = ARROW KEYS 
 
-        Tokens transform the music you're creating. Each colour in a different way for you to discover. They also make you invincible against any obstacle. Each time you complete a level, you have completed an entire piece of music.</p>
+        Tokens transform the music you&apos;re creating. Each colour in a different way for you to discover. They also make you invincible against any obstacle. Each time you complete a level, you have completed an entire piece of music.</p>
       </SmallScreenSection>
       {/* ------------------------------------------------------------------------------------------ */}
       <LargeScreenSection flexDirection="flex-col" breakpoint='lg'>
