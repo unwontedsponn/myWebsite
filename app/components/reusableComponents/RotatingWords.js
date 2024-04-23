@@ -5,11 +5,11 @@ export default function RotatingWords({ words, intervalDuration = 1500 }) {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentWord((currentWord) => (currentWord + 1) % words.length);
+      setCurrentWord(currentWord => (currentWord + 1) % words.length);
     }, intervalDuration);
 
     return () => clearInterval(intervalId);
-  }, [words.length]);
+  }, [words.length, intervalDuration]); // Include intervalDuration in the dependency array
 
   return (
     <p>
