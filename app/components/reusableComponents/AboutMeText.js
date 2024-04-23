@@ -8,7 +8,7 @@ export default function AboutMeText() {
   const [textIndex, setTextIndex] = useState(0); // State to control which text is shown
   const textOptions = [
     <>
-      <p>Hello there! I'm <span className="font-gopher-mono-semi">Ben Spooner</span>, a multifaceted professional blending passions in technology, music, and art. My journey into the tech world was anything but conventional. After a successful 15-year tenure as a business owner providing music and audio services, I embarked on a new adventure in web development. This leap of faith was bolstered when I secured a scholarship for a highly competitive Software Engineering & Data Science course, standing out among 20,000 applicants.</p>
+      <p>Hello there! I&apos;m <span className="font-gopher-mono-semi">Ben Spooner</span>, a multifaceted professional blending passions in technology, music, and art. My journey into the tech world was anything but conventional. After a successful 15-year tenure as a business owner providing music and audio services, I embarked on a new adventure in web development. This leap of faith was bolstered when I secured a scholarship for a highly competitive Software Engineering & Data Science course, standing out among 20,000 applicants.</p>
     </>,
     <>
       <p><span className="font-gopher-mono-semi color-green ">A Glimpse into My Tech Journey:</span></p>
@@ -16,7 +16,7 @@ export default function AboutMeText() {
     </>,
     <>
       <p><span className="font-gopher-mono-semi color-green">A Brief History of My Audio Endeavors:</span></p>
-      <p>Over the last decade and a half, I've worn many hats in the audio world - from performing with Joy Crookes and touring at the Edinburgh Festival to teaching ABRSM and examining for RSL. My composition skills were showcased in the award-winning short film When We Fell, which garnered international acclaim and several awards, including nominations from the British Animation Awards. Presently, I channel my musical creativity through independent releases as Sponn and Green and Pine.</p>
+      <p>Over the last decade and a half, I&apos;ve worn many hats in the audio world - from performing with Joy Crookes and touring at the Edinburgh Festival to teaching ABRSM and examining for RSL. My composition skills were showcased in the award-winning short film When We Fell, which garnered international acclaim and several awards, including nominations from the British Animation Awards. Presently, I channel my musical creativity through independent releases as Sponn and Green and Pine.</p>
     </>,
     <>
       <p><span className="font-gopher-mono-semi color-green">A Little More About Me:</span></p>
@@ -31,8 +31,8 @@ export default function AboutMeText() {
     </>,
     <>
       <p><span className="font-gopher-mono-semi color-green">Current projects:</span></p>
-      <p><span className="font-gopher-mono-semi">Integrated Training Environment (ITE):</span>"Realtime rhythm training via midi devices and Bela.io hardware."</p>
-      <p><span className="font-gopher-mono-semi">Music Maker Network podcast (MMN):</span> "Where we chat to the people, that make music happen".</p>
+      <p><span className="font-gopher-mono-semi">Integrated Training Environment (ITE):</span>&quot;Realtime rhythm training via midi devices and Bela.io hardware.&quot;</p>
+      <p><span className="font-gopher-mono-semi">Music Maker Network podcast (MMN):</span> &quot;Where we chat to the people, that make music happen&quot;.</p>
       <p>For a deeper dive into my work and adventures, check out my YouTube channel.</p>
     </>
   ];
