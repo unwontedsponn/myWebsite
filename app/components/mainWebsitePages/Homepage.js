@@ -33,7 +33,7 @@ export default function Homepage() {
           </SlideFadeIn>
           
           <SlideFadeIn direction="left">
-            <h1 className="flex justify-center font-gopher-mono-semi opacity-40 color-blue text-7xl whitespace-nowrap">I'm Ben</h1>
+            <h1 className="flex justify-center font-gopher-mono-semi opacity-40 color-blue text-7xl whitespace-nowrap">I&apos;m Ben</h1>
           </SlideFadeIn>
 
         </SmallScreenSection>
@@ -50,9 +50,9 @@ export default function Homepage() {
 
               <SlideFadeIn direction="right" className="text-4xl max-w-2xl color-dark-blue font-gopher-mono underline tracking-largep text-decoration-color md:pl-24"><p>and I like making... </p><RotatingWords words={words} /></SlideFadeIn>
 
-              <SlideFadeIn direction="left" className="font-gopher-mono-semi color-blue leading-none text-11xl pb-0"><p className="opacity-40">I'm Ben</p></SlideFadeIn>
+              <SlideFadeIn direction="left" className="font-gopher-mono-semi color-blue leading-none text-11xl pb-0"><p className="opacity-40">I&apos;m Ben</p></SlideFadeIn>
 
-              <SlideFadeIn direction="up" className="pl-28 color-dark font-gopher-mono tracking-smallphomepage text-xs max-w-2xl">I thrive on bringing ideas to life. From creating books and games to websites and musical pieces, I'm fuelled by a passion for creative endeavours, and <span className="italic">getting things done</span></SlideFadeIn>
+              <SlideFadeIn direction="up" className="pl-28 color-dark font-gopher-mono tracking-smallphomepage text-xs max-w-2xl">I thrive on bringing ideas to life. From creating books and games to websites and musical pieces, I&apos;m fuelled by a passion for creative endeavours, and <span className="italic">getting things done</span></SlideFadeIn>
           </div>
 
           {/* Right Column */}
