@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import { combinations } from '../pktTutorPatterns/six-3-2';
 import { fourCombinations } from '../pktTutorPatterns/four-3-2';
 import Card from '../reusableComponents/sectionsAndElements/Card';
+import Image from 'next/image';
 
 const getRandomIndex = (array) => Math.floor(Math.random() * array.length);
 
@@ -84,11 +85,17 @@ export default function PktTutor() {
               </div>
             </div>
 
-            <div className="font-gopher-mono flex items-center">
-              <img className="h-[1em] mr-2" src="images/magnifying glass.svg" alt="" />
+            <div className="font-gopher-mono inline-flex items-center border">
+              <Image
+                src="images/magnifying glass.svg"
+                width={500}
+                height={500}
+                alt="Magnifying glass"
+                className="h-[1em]"
+              />
               <input type="text" 
                 placeholder="Search cards..." 
-                className="font-gopher-mono outline-none flex-grow py-1 px-2 rounded-md"
+                className="font-gopher-mono outline-none py-1 px-2 rounded-md"
                 aria-label="Search" />
             </div>
 
