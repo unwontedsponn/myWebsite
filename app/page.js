@@ -1,5 +1,7 @@
 "use client"
+
 import { useState } from 'react';
+
 import './globals.css';
 import Header from "./components/mainWebsitePages/Header";
 import Homepage from './components/mainWebsitePages/Homepage';
@@ -41,7 +43,7 @@ export default function Home() {
           <Homepage />
           <About />
           <Book />
-          <Game className="hidden xl:block"/>
+          {/* <Game /> */}
         </>
       )}
       {visibleSection === 'pktTutor' && (
