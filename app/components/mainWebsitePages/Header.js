@@ -2,7 +2,7 @@
 import Arrow from '../reusableComponents/sectionsAndElements/Arrow';
 import { useState, useEffect } from 'react';
 import Contact from './Contact';
-import Breadcrumb from '../reusableComponents/Breadcrumb';
+// import Breadcrumb from '../reusableComponents/Breadcrumb';
 
 export default function Header({ changeSection }) {
   const [showModal, setShowModal] = useState(false);
@@ -53,7 +53,7 @@ export default function Header({ changeSection }) {
                       <a href={textOptions[textIndex].url} className="font-gopher-mono-semi" onClick={() => changeSection(textOptions[textIndex].sectionId)}>
                         {textOptions[textIndex].text}
                       </a>
-                      <Breadcrumb currentIndex={textIndex} itemCount={textOptions.length} onBreadcrumbClick={setTextIndex}/>
+                      {/* <Breadcrumb currentIndex={textIndex} itemCount={textOptions.length} onBreadcrumbClick={setTextIndex}/> */}
                   </div>
                   <Arrow direction="right" onClick={() => changeWebsite("right")} width={20} height={20} />
 

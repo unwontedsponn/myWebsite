@@ -48,9 +48,6 @@ export default function Book() {
   );
 }
 
-
-
-
 {/* FREE DOWNLOAD */}
 {/* <div className="flex items-end">
   <p id="book-sample" className="bold font-gopher-mono mt-2 text-xl">
