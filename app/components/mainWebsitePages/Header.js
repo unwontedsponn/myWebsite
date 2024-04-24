@@ -69,7 +69,7 @@ export default function Header({ changeSection }) {
                     aboutMe
                 </a>
                 <a id="bookNav" href="#book" className="hidden sm:block border-l-2 border-custom-border-color pl-6">myBook</a>
-                <a id="gameNav" href="#game" className="hidden sm:block border-l-2 border-custom-border-color pl-6">myGame</a>
+                {/* <a id="gameNav" href="#game" className="hidden sm:block border-l-2 border-custom-border-color pl-6">myGame</a> */}
                 <button id="contactNav" className="sm:border-l-2 border-custom-border-color pl-6" onClick={toggleModal}>contactMe</button>
               </div>
 
