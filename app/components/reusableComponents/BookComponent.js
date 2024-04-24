@@ -9,25 +9,19 @@ import Breadcrumb from './Breadcrumb';
 export default function BookComponent({ width, height, direction, minWidth, maxWidth }) {
 
   const bookPages = [
-    '/myBookPages/page1.jpg',
-    // '/myBookPages/page8.jpg',
-    // '/myBookPages/page9.jpg',
-    // '/myBookPages/page10.jpg',
-    // '/myBookPages/page11.jpg',
-    // '/myBookPages/page12.jpg',
-    // '/myBookPages/page13.jpg',
-    '/myBookPages/page14.jpg',
-    '/myBookPages/page15.jpg',
-    '/myBookPages/page16.jpg',
-    '/myBookPages/page17.jpg',
-    '/myBookPages/page18.jpg',
-    '/myBookPages/page19.jpg',
-    '/myBookPages/page20.jpg',
-    '/myBookPages/page21.jpg',
-    '/myBookPages/page22.jpg',
-    '/myBookPages/page23.jpg',
-    '/myBookPages/page24.jpg',
-    '/myBookPages/page25.jpg',
+    '/myBookPages/page1.png',
+    '/myBookPages/page2.png',
+    '/myBookPages/page3.png',
+    '/myBookPages/page4.png',
+    '/myBookPages/page5.png',
+    '/myBookPages/page6.png',
+    '/myBookPages/page7.png',
+    '/myBookPages/page8.png',
+    '/myBookPages/page9.png',
+    '/myBookPages/page10.png',
+    '/myBookPages/page11.png',
+    '/myBookPages/page12.png',
+    '/myBookPages/page13.png',
   ];
   
   const [currentPage, setCurrentPage] = useState(0); // Start with the first page
