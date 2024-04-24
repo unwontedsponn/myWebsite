@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Footer() {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -10,36 +10,37 @@ export default function Footer() {
         }
     });
 
+    const [responsiveText, setResponsiveText] = useState(isPlaying ? "'Room of My Own'" : "greenAndPine");
+
     // Toggle play/pause based on isPlaying state and cleanup audio
     useEffect(() => {
-        if (audio) {
-            isPlaying ? audio.play() : audio.pause();
-        }
-        // Cleanup to pause audio when component unmounts
-        return () => audio?.pause();
+        if (audio) isPlaying ? audio.play() : audio.pause();
+        return () => audio?.pause(); // Cleanup to pause audio when component unmounts
     }, [isPlaying, audio]);
 
-    // Adjust footer height dynamically
     useEffect(() => {
         const adjustFooterHeight = () => {
             const footerHeight = document.querySelector('#footer')?.offsetHeight || 0;
             document.documentElement.style.setProperty('--footer-height', `${footerHeight}px`);
         };
-
         adjustFooterHeight(); // Call initially and on resize
         window.addEventListener('resize', adjustFooterHeight);
         return () => window.removeEventListener('resize', adjustFooterHeight);
-    }, []); // Empty dependency array ensures this runs once on mount and cleanup
+    }, []);
 
-    // Handle responsive text
-    const responsiveText = useMemo(() => {
-        const baseText = isPlaying ? "'Room of My Own'" : "greenAndPine";
-        // Check if window is defined before accessing it
-        if (typeof window !== 'undefined') {
-            return window.innerWidth <= 768 ? baseText : `Now Playing: ${baseText}`;
-        }
-        return baseText; // Default text if window is not available
-    }, [isPlaying]);
+    useEffect(() => {
+        const updateResponsiveText = () => {
+            const baseText = isPlaying ? "'Room of My Own'" : "greenAndPine";
+            setResponsiveText(window.innerWidth <= 768 ? baseText : `Now Playing: ${baseText}`);
+        };
+
+        updateResponsiveText();
+        window.addEventListener('resize', updateResponsiveText);
+
+        return () => {
+            window.removeEventListener('resize', updateResponsiveText);
+        };
+    }, [isPlaying]); // Include isPlaying in the dependency array to update text when it changes
 
     const togglePlayPause = () => setIsPlaying(!isPlaying);
 
