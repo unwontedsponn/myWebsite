@@ -34,7 +34,11 @@ export default function Footer() {
     // Handle responsive text
     const responsiveText = useMemo(() => {
         const baseText = isPlaying ? "'Room of My Own'" : "greenAndPine";
-        return window.innerWidth <= 768 ? baseText : `Now Playing: ${baseText}`;
+        // Check if window is defined before accessing it
+        if (typeof window !== 'undefined') {
+            return window.innerWidth <= 768 ? baseText : `Now Playing: ${baseText}`;
+        }
+        return baseText; // Default text if window is not available
     }, [isPlaying]);
 
     const togglePlayPause = () => setIsPlaying(!isPlaying);
