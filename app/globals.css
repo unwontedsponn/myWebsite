@@ -64,6 +64,14 @@ html {scroll-behavior: smooth;}
 .flashing-text {animation: flashAnimation 1s linear infinite;}
 
 /**
+* Media Queries
+*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-height: 760px) {
+  #homepage-hello-text, #homepage-im-ben-text {display: none;}
+}
+
+/**
 * :Hover and Text decoration
 */
 /*--------------------------------------------------------------------------------------------------------------------*/

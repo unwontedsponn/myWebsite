@@ -5,6 +5,11 @@ import LargeScreenSection from '../reusableComponents/sectionsAndElements/LargeS
 import SlideFadeIn from '../reusableComponents/SlideFadeIn';
 import RotatingWords from '../reusableComponents/RotatingWords';
 
+window.addEventListener('resize', function() {
+  console.log(window.innerHeight);
+});
+
+
 export default function Homepage() {
   const words = ["things", "websites", "games", "music", "films", "books", "sketches"];
 
@@ -19,7 +24,7 @@ export default function Homepage() {
         <SmallScreenSection className="">
 
           <SlideFadeIn direction="left">
-            <h1 className="text-center font-gopher-mono-semi opacity-40 color-blue text-6xl">Hello,</h1>
+            <h1 id="homepage-hello-text" className="text-center font-gopher-mono-semi opacity-40 color-blue text-6xl">Hello,</h1>
           </SlideFadeIn>
 
           <SlideFadeIn className="max-w-xs border-3 border-thick-border-gray" direction="right"> 
@@ -33,7 +38,7 @@ export default function Homepage() {
           </SlideFadeIn>
           
           <SlideFadeIn direction="left">
-            <h1 className="flex justify-center font-gopher-mono-semi opacity-40 color-blue text-7xl whitespace-nowrap">I&apos;m Ben</h1>
+            <h1 id="homepage-im-ben-text" className="flex justify-center font-gopher-mono-semi opacity-40 color-blue text-7xl whitespace-nowrap">{`I'm Ben`}</h1>
           </SlideFadeIn>
 
         </SmallScreenSection>
