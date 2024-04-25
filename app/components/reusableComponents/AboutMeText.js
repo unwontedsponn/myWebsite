@@ -7,11 +7,11 @@ export default function AboutMeText({ }) {
   const [textIndex, setTextIndex] = useState(0); // State to control which text is shown
   const textOptions = [
     <>
-      <p>Hello there! I&apos;m <span className="font-gopher-mono-semi">Ben Spooner</span>, a multifaceted professional blending passions in technology, music, and art. My journey into the tech world was anything but conventional. After a successful 15-year tenure as a business owner providing music and audio services, I embarked on a new adventure in web development. This leap of faith was bolstered when I secured a scholarship for a highly competitive Software Engineering & Data Science course, standing out among 20,000 applicants.</p>
+      <p>Hello there! I&apos;m <span className="font-gopher-mono-semi">Ben Spooner</span>, a professional blending passions in technology, music, and art. My journey into the tech world was anything but conventional. After a successful 15-year tenure as a business owner providing music and audio services, I embarked on a new adventure in web development. This leap of faith was bolstered when I secured a scholarship for a highly competitive Software Engineering & Data Science course, standing out among 20,000 applicants.</p>
     </>,
     <>
       <p><span className="font-gopher-mono-semi color-green ">A Glimpse into My Tech Journey:</span></p>
-      <p>My coding saga began unexpectedly while pursuing an MSc in Music and Sound. Diving into C# to integrate sound into computer games using Unity Game Engine, I discovered a newfound passion. This led me down the path of self-taught programming, culminating in the creation of this portfolio website from the ground up using Next.Js, Tailwind CSS & Three.js.</p>
+      <p>My coding saga began unexpectedly while pursuing an MSc in Music and Sound. Diving into C# to integrate sound into computer games using Unity Game Engine, I discovered a newfound passion. This led me down the path of self-taught programming, culminating in the creation of this portfolio website from the ground up using Next.Js, Tailwind CSS & Vercel.</p>
     </>,
     <>
       <p><span className="font-gopher-mono-semi color-green">A Brief History of My Audio Endeavors:</span></p>
@@ -43,7 +43,7 @@ export default function AboutMeText({ }) {
   return (
     <div className="flex flex-row pt-6 max-w-3xl">
 
-      <div className="flex flex-col w-full text-center xl:text-right px-2">
+      <div className="flex flex-col w-full text-left xl:text-right px-2">
         <SlideFadeIn direction="up">
           <div 
             className="color-dark font-gopher-mono text-xs sm:text-sm cursor-pointer"
