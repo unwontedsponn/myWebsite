@@ -31,7 +31,7 @@ export default function Homepage() {
             <h1 id="homepage-hello-text" className="text-center font-gopher-mono-semi opacity-40 color-blue text-6xl">Hello,</h1>
           </SlideFadeIn>
 
-          <SlideFadeIn className="max-w-xs border-3 border-thick-border-gray" direction="right"> 
+          <SlideFadeIn className="max-w-xs border-3 border-thick-border-gray image-max-width-xs-to-sm" direction="right"> 
             <Image 
               src='/images/homepage-pic.jpeg'
               alt="homepage picture"

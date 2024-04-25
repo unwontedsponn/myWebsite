@@ -68,7 +68,14 @@ html {scroll-behavior: smooth;}
 */
 /*--------------------------------------------------------------------------------------------------------------------*/
 @media only screen and (max-height: 760px) {
-  #homepage-hello-text, #homepage-im-ben-text {display: none;}
+  #homepage-hello-text,
+  #homepage-im-ben-text {
+    display: none;
+  }
+
+  .image-max-width-xs-to-sm {
+    max-width: 24rem; /* equivalent to Tailwind's max-w-sm */
+  }
 }
 
 /**
