@@ -5,9 +5,13 @@ import LargeScreenSection from '../reusableComponents/sectionsAndElements/LargeS
 import SlideFadeIn from '../reusableComponents/SlideFadeIn';
 import RotatingWords from '../reusableComponents/RotatingWords';
 
-window.addEventListener('resize', function() {
-  console.log(window.innerHeight);
-});
+// Checks the viewport height - after checking if the window object is defined
+if (typeof window !== 'undefined') {
+  window.addEventListener('resize', function() {
+    console.log(window.innerHeight);
+  });
+}
+
 
 
 export default function Homepage() {
