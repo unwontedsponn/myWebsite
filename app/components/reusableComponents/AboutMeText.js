@@ -1,9 +1,8 @@
 import { useState } from "react";
-import Arrow from "./sectionsAndElements/Arrow";
 import Breadcrumb from "./Breadcrumb";
 import SlideFadeIn from "./SlideFadeIn";
 
-export default function AboutMeText() {
+export default function AboutMeText({ }) {
 
   const [textIndex, setTextIndex] = useState(0); // State to control which text is shown
   const textOptions = [
@@ -49,10 +48,6 @@ export default function AboutMeText() {
   return (
     <div className="flex flex-row pt-6 max-w-3xl">
 
-      <SlideFadeIn direction="down">
-        <Arrow direction="left" onClick={() => changeText("left")} width={50} height={50} />
-      </SlideFadeIn>
-
       <div className="flex flex-col w-full text-center xl:text-right px-2">
         <SlideFadeIn direction="up">
           <div className="color-dark font-gopher-mono text-xs sm:text-sm">{textOptions[textIndex]}</div>
@@ -61,10 +56,6 @@ export default function AboutMeText() {
           <Breadcrumb currentIndex={textIndex} itemCount={textOptions.length} onBreadcrumbClick={(index) => setTextIndex(index)}/>
         </SlideFadeIn>
       </div>
-
-      <SlideFadeIn direction="down">
-        <Arrow direction="right" onClick={() => changeText("right")} width={50} height={50} />
-      </SlideFadeIn>
 
     </div>
   )
