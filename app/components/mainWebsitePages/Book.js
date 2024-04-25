@@ -13,7 +13,7 @@ export default function Book() {
 
         <SmallScreenSection spaceY="space-y-6">
 
-          <SlideFadeIn direction="left" className="color-blue font-gopher-mono-semi text-7xl"><h1  className="opacity-40">myBook</h1></SlideFadeIn>
+          {/* <SlideFadeIn direction="left" className="color-blue font-gopher-mono-semi text-7xl"><h1  className="opacity-40">myBook</h1></SlideFadeIn> */}
 
           <BookComponent width={500} height={500} direction="right" maxWidth='max-w-sm'/>
 
@@ -42,7 +42,7 @@ export default function Book() {
           </div>
                           
           {/* Right Column */}
-          <BookComponent width={4000} height={4000} direction="right" minWidth='min-w-7xl'/>
+          <BookComponent width={3000} height={3000} direction="right" minWidth='min-w-7xl'/>
         </LargeScreenSection>
   </Section>
   );

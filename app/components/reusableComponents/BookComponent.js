@@ -1,5 +1,4 @@
 "use client"
-import Arrow from './sectionsAndElements/Arrow';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
@@ -43,7 +42,6 @@ export default function BookComponent({ width, height, direction, minWidth, maxW
 
   return (
     <div ref={ref} className={`flex ${minWidth} ${maxWidth}`}>
-      <Arrow direction="left" onClick={() => prevPage()} width={50} height={50} />
       
       <div className="flex flex-col w-full text-center xl:text-right px-2">
         <SlideFadeIn className={`border-3 border-thick-border-gray`} direction={direction}> 
@@ -57,7 +55,6 @@ export default function BookComponent({ width, height, direction, minWidth, maxW
         <Breadcrumb currentIndex={currentPage} itemCount={bookPages.length} onBreadcrumbClick={setCurrentPage}/>
       </div>
       
-      <Arrow direction="right" onClick={() => nextPage()} width={50} height={50} />
     </div>
   );
 }
