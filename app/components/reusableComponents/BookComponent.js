@@ -56,7 +56,9 @@ export default function BookComponent({ width, height, direction, minWidth, maxW
             />
           </div>
         </SlideFadeIn>
-        <Breadcrumb currentIndex={currentPage} itemCount={bookPages.length} onBreadcrumbClick={setCurrentPage}/>
+        <SlideFadeIn direction="left">
+          <Breadcrumb currentIndex={currentPage} itemCount={bookPages.length} onBreadcrumbClick={setCurrentPage}/>
+        </SlideFadeIn>
       </div>
       
     </div>
