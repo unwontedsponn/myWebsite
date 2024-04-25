@@ -36,13 +36,8 @@ export default function AboutMeText({ }) {
     </>
   ];
 
-  const changeText = (direction) => {
-    setTextIndex((current) => {
-      // Calculate the new index based on the direction
-      const newIndex = direction === 'left' ? current - 1 : current + 1;
-      // Adjust the index to wrap around the text options array
-      return (newIndex + textOptions.length) % textOptions.length;
-    });
+  const nextPage = () => {
+    setTextIndex(current => (current + 1) % textOptions.length); // Increment text index, wrap around
   };
 
   return (
@@ -50,7 +45,12 @@ export default function AboutMeText({ }) {
 
       <div className="flex flex-col w-full text-center xl:text-right px-2">
         <SlideFadeIn direction="up">
-          <div className="color-dark font-gopher-mono text-xs sm:text-sm">{textOptions[textIndex]}</div>
+          <div 
+            className="color-dark font-gopher-mono text-xs sm:text-sm cursor-pointer"
+            onClick={nextPage}
+          >
+            {textOptions[textIndex]}
+          </div>
         </SlideFadeIn>
         <SlideFadeIn direction="right">
           <Breadcrumb currentIndex={textIndex} itemCount={textOptions.length} onBreadcrumbClick={(index) => setTextIndex(index)}/>
