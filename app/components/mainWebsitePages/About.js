@@ -13,14 +13,6 @@ export default function About() {
 
         <SmallScreenSection spaceY='space-y-2'>
 
-          {/* <h2 id="about-title" className="hidden md:block color-blue font-gopher-mono-semi opacity-40 leading-none text-10xl mt-4">aboutMe</h2> */}
-
-          {/* <p className="font-gopher-mono color-dark-blue underline text-decoration-color tracking-largep text-xl">A little bit</p>
-
-          <div className="font-gopher-mono color-dark-blue underline text-decoration-color tracking-largep text-3xl">
-            <TypewriterEffect text="about me..." />
-          </div> */}
-
           <SlideFadeIn direction="right">
             <h1 className="text-center font-gopher-mono-semi opacity-40 color-blue text-6xl">aboutMe</h1>
           </SlideFadeIn>
@@ -28,6 +20,7 @@ export default function About() {
 
           <SlideFadeIn className="max-w-xs" direction="left"> 
             <Image 
+              id="piano-img"
               src='/images/piano.png'
               alt="Piano"
               width={500}
