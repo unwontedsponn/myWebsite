@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import SlideFadeIn from './SlideFadeIn';
 import Breadcrumb from './Breadcrumb';
@@ -24,8 +24,8 @@ export default function BookComponent({ width, height, direction, minWidth, maxW
   ];
   
   const [currentPage, setCurrentPage] = useState(0); // Start with the first page
-  const nextPage = () => setCurrentPage((prevPage) => (prevPage + 1) % bookPages.length);
-  const prevPage = () => setCurrentPage((prevPage) => (prevPage - 1 + bookPages.length) % bookPages.length);
+  const touchStartRef = useRef(0);
+  const touchEndRef = useRef(0);
 
   // The useInView hook to monitor the component's visibility
   const { ref, inView } = useInView({
@@ -40,8 +40,34 @@ export default function BookComponent({ width, height, direction, minWidth, maxW
     }
   }, [inView]); // Dependency on inView
 
+  const handleTouchStart = (e) => {
+    touchStartRef.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndRef.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartRef.current - touchEndRef.current > 50) {
+      // Swipe left
+      nextPage();
+    } else if (touchStartRef.current - touchEndRef.current < -50) {
+      // Swipe right
+      prevPage();
+    }
+  };
+
+  const nextPage = () => {
+    setCurrentPage((prevPage) => (prevPage + 1) % bookPages.length);
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prevPage) => (prevPage - 1 + bookPages.length) % bookPages.length);
+  };
+
   return (
-    <div ref={ref} className={`flex ${minWidth} ${maxWidth}`}>
+    <div ref={ref} className={`flex ${minWidth} ${maxWidth}`} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
       
       <div className="flex flex-col w-full text-center xl:text-right px-2">
         <SlideFadeIn className={`border-3 border-thick-border-gray`} direction={direction}> 
