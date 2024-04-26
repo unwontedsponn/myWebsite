@@ -39,7 +39,7 @@ export default function Sponn() {
           <div className="flex flex-col w-2/3">       
               <SlideFadeIn direction="left" className="color-blue font-gopher-mono-semi leading-none text-11xl"><h1 className="opacity-40">sponn</h1></SlideFadeIn>
 
-              <SlideFadeIn direction="right" className="color-dark-blue font-gopher-mono underline text-decoration-color text-4xl pl-32 tracking-largep whitespace-nowrap"><p className=""><TypewriterEffect text="the one and only" /></p></SlideFadeIn>
+              <SlideFadeIn direction="right" className="color-dark-blue font-gopher-mono underline text-decoration-color text-4xl pl-32 tracking-largep whitespace-nowrap"><p className=""><TypewriterEffect text="coming soon..." /></p></SlideFadeIn>
 
               {/* <AboutMeText /> */}
 
