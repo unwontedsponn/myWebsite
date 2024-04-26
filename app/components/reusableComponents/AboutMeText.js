@@ -11,7 +11,7 @@ export default function AboutMeText({ }) {
     </>,
     <>
       <p><span className="font-gopher-mono-semi color-green ">A Glimpse into My Tech Journey:</span></p>
-      <p>My coding saga began unexpectedly while pursuing an MSc in Music and Sound. Diving into C# to integrate sound into computer games using Unity Game Engine, I discovered a newfound passion. This led me down the path of self-taught programming, culminating in the creation of this portfolio website from the ground up using Next.Js, Tailwind CSS & Vercel.</p>
+      <p>My coding journey began unexpectedly while pursuing an MSc in Music and Sound. Diving into C# to integrate sound into computer games using Unity Game Engine, I discovered a newfound passion. This led me down the path of self-taught programming, culminating in the creation of this portfolio website from the ground up using Next.Js, Tailwind CSS & Vercel.</p>
     </>,
     <>
       <p><span className="font-gopher-mono-semi color-green">A Brief History of My Audio Endeavors:</span></p>
