@@ -7,7 +7,7 @@ export default function AboutMeText({ }) {
   const [textIndex, setTextIndex] = useState(0); // State to control which text is shown
   const textOptions = [
     <>
-      <p>Hello there! I&apos;m <span className="font-gopher-mono-semi">Ben Spooner</span>, a professional blending passions in technology, music, and art. My journey into the tech world was anything but conventional. After a successful 15-year tenure as a business owner providing music and audio services, I embarked on a new adventure in web development. This leap of faith was bolstered when I secured a scholarship for a highly competitive Software Engineering & Data Science course, standing out among 20,000 applicants.</p>
+      <p>Hello there! I&apos;m <span className="font-gopher-mono-semi">Ben Spooner</span>, a musician, javascript enthusiast and technical support engineer at Neat. My journey into the tech world was anything but conventional. After a successful 15-year tenure as a business owner providing music and audio services, I embarked on a new adventure in web development. This leap of faith was bolstered when I secured a scholarship for a highly competitive Software Engineering & Data Science course, standing out among 20,000 applicants.</p>
     </>,
     <>
       <p><span className="font-gopher-mono-semi color-green ">A Glimpse into My Tech Journey:</span></p>
