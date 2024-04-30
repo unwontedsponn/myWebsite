@@ -34,35 +34,35 @@ export default function Home() {
 
   return (
     <main className="background-light flex justify-center">
-    <div className="overflow-y-scroll overflow-x-hidden h-screen max-w-screen-2xl scroll-snap-y mandatory">
-      <Header changeSection={changeSection} currentSection={visibleSection}/>
-      {visibleSection === 'default' && (
-        <>
-          <Contact />
-          <Footer />
-          <Homepage />
-          <About />
-          <Book />
-        </>
-      )}
-      {visibleSection === 'sponn' && (
-        <>
-          <Contact />
-          <Footer />
-          <Sponn />
-        </>
-      )}
-      {visibleSection === 'pktTutor' && (
-        <>
-          <Contact />
-          <Footer />
-          <PktTutor />
-        </>
-      )}
-      {visibleSection === 'login' && (
-        <Login onLoginSuccess={handleLoginSuccess} />
-      )}
-    </div>
-  </main>
+      <div className="overflow-y-scroll overflow-x-hidden h-screen max-w-screen-2xl scroll-snap-y mandatory">
+        <Header changeSection={changeSection} currentSection={visibleSection}/>
+        {visibleSection === 'default' && (
+          <>
+            <Contact />
+            <Footer />
+            <Homepage />
+            <About />
+            <Book />
+          </>
+        )}
+        {visibleSection === 'sponn' && (
+          <>
+            <Contact />
+            <Footer />
+            <Sponn />
+          </>
+        )}
+        {visibleSection === 'pktTutor' && (
+          <>
+            <Contact />
+            <Footer />
+            <PktTutor />
+          </>
+        )}
+        {visibleSection === 'login' && (
+          <Login onLoginSuccess={handleLoginSuccess} />
+        )}
+      </div>
+    </main>
   );
 }
