@@ -14,17 +14,12 @@ import PktTutor from './components/mainWebsitePages/PktTutor';
 import Login from './components/mainWebsitePages/Login';
 
 export default function Home() {
-  // State to control which sections are visible
   const [visibleSection, setVisibleSection] = useState('default');
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // New state to manage login status
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const changeSection = (section) => {
-    if (section === 'pktTutor' && !isLoggedIn) {
-      // If user selects pktTutor but isn't logged in, prompt login
-      setVisibleSection('login');
-    } else {
-      setVisibleSection(section);
-    }
+    if (section === 'pktTutor' && !isLoggedIn) setVisibleSection('login');
+    else setVisibleSection(section);
   };
 
   const handleLoginSuccess = () => {
