@@ -9,7 +9,7 @@ import BuyNowLinks from '../reusableComponents/BuyNowLinks';
 export default function Book() {
 
   return (
-      <Section id="book">
+      <Section id="myBook">
 
         <SmallScreenSection spaceY="space-y-6">
 

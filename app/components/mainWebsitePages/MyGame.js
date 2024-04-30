@@ -8,7 +8,7 @@ import TypewriterEffect from '../reusableComponents/TypewriterEffect';
 export default function Game() {
   
   return (
-    <Section id="game">
+    <Section id="myGame">
       
       <SmallScreenSection id="canvas-container" xlHidden={false} spaceY='space-y-4'>
         <h2 className="color-blue font-gopher-mono-semi opacity-40 leading-none text-8xl">myGame</h2>

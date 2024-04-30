@@ -12,7 +12,7 @@ export default function Login({onLoginSuccess}) {
   };
 
   return (
-    <section id="homepage" className="pt-[var(--header-height)] pb-[var(--footer-height)] flex flex-col w-full h-screen overflow-hidden">
+    <section id="login" className="pt-[var(--header-height)] pb-[var(--footer-height)] flex flex-col w-full h-screen overflow-hidden">
 
         {/**
           * Small Screens Layout

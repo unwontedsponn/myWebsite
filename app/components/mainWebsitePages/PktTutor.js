@@ -53,7 +53,7 @@ export default function PktTutor() {
   if (!randomCombination) return <div>Loading...</div>;
 
   return (
-    <Section id="pocket-tutor">
+    <Section id="pktT">
       <SmallScreenSection py='py-10' xlHidden={false}>
         <h2 id="tutor-title" className="text-center color-blue font-gopher-mono-semi opacity-40 text-7xl">pktTutor</h2>
         <div className="mb-4">

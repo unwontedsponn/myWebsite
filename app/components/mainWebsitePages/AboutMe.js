@@ -9,7 +9,7 @@ import SlideFadeIn from '../reusableComponents/SlideFadeIn';
 export default function About() {
 
   return (
-      <Section id="about">
+      <Section id="aboutMe">
 
         <SmallScreenSection spaceY='space-y-2'>
 
