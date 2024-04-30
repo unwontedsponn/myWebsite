@@ -10,7 +10,6 @@ import Footer from './components/mainWebsitePages/Footer';
 import About from './components/mainWebsitePages/About';
 import Book from './components/mainWebsitePages/Book';
 import Sponn from './components/mainWebsitePages/Sponn';
-import Game from './components/mainWebsitePages/notUsed/GameKTMA';
 import PktTutor from './components/mainWebsitePages/PktTutor';
 import Login from './components/mainWebsitePages/Login';
 
@@ -44,7 +43,6 @@ export default function Home() {
           <Homepage />
           <About />
           <Book />
-          {/* <Game /> */}
         </>
       )}
       {visibleSection === 'sponn' && (
