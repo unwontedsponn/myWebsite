@@ -13,7 +13,11 @@ export default function Sponn() {
         <SmallScreenSection>
 
           <SlideFadeIn direction="right">
-            <h1 className="text-center font-gopher-mono-semi opacity-40 color-blue text-6xl">sponn</h1>
+            <h1 className="text-center font-gopher-mono-semi opacity-40 color-blue text-8xl">sponn</h1>
+          </SlideFadeIn>
+
+          <SlideFadeIn direction="right" className="color-dark-blue font-gopher-mono underline text-decoration-color text-2xl tracking-largep whitespace-nowrap">
+            <p className=""><TypewriterEffect text="coming soon..." /></p>
           </SlideFadeIn>
           
 
