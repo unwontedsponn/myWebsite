@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import './globals.css';
 import Header from "./components/mainWebsitePages/Header";
-import Footer from './components/mainWebsitePages/Footer';
 import Sections from './components/mainWebsitePages/Sections';
+import Footer from './components/mainWebsitePages/Footer';
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('benSpooner');

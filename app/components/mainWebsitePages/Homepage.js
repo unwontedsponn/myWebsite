@@ -12,19 +12,12 @@ if (typeof window !== 'undefined') {
   });
 }
 
-
-
 export default function Homepage() {
   const words = ["things", "websites", "games", "music", "films", "books", "sketches"];
 
   return (
     <Section id="homepage">
 
-        {/**
-          * Small Screens Layout
-          */
-          /*--------------------------------------------------------------------------------------------------------------------*/
-        }
         <SmallScreenSection className="">
 
           <SlideFadeIn direction="left">

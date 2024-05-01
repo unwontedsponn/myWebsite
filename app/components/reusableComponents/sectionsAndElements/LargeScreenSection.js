@@ -12,8 +12,9 @@ export default function LargeScreenSection({
   justifyContent = 'justify-center', // Default to 'justify-center'
   gapX = 'gap-x-8', // Default value for gap-x
   paddingX = 'px-0', // Default padding x (no padding)
+  className
 }) {
-  const containerClasses = `hidden h-screen overflow-hidden xl:flex ${flexDirection} ${justifyContent} items-center ${gapX} ${paddingX}`;
+  const containerClasses = `hidden h-screen overflow-hidden xl:flex ${flexDirection} ${justifyContent} items-center ${gapX} ${paddingX} ${className}`;
 
   return (
     <div className={containerClasses}>

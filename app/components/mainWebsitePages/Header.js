@@ -8,8 +8,6 @@ export default function Header({ setCurrentSection }) {
   
   const [showModal, setShowModal] = useState(false);
   const toggleModal = () => setShowModal(!showModal);
-
-  // State to keep track of the currently selected index in the navigation
   const [textIndex, setTextIndex] = useState(0);
 
   const textOptions = [
