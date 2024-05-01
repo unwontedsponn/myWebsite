@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Section from '../reusableComponents/sectionsAndElements/Section';
-import SmallScreenSection from '../reusableComponents/sectionsAndElements/SmallScreenSection';
-import LargeScreenSection from '../reusableComponents/sectionsAndElements/LargeScreenSection';
+import Section from '../reusableComponents/Section';
+import SmallScreenSection from '../reusableComponents/SmallScreenSection';
+import LargeScreenSection from '../reusableComponents/LargeScreenSection';
 import SlideFadeIn from '../reusableComponents/SlideFadeIn';
-import YouTubeVideo from '../reusableComponents/sectionsAndElements/YouTubeVideo'; // Import the YouTubeVideo component
+import YouTubeVideo from '../reusableComponents/YouTubeVideo'; // Import the YouTubeVideo component
 import Breadcrumb from '../reusableComponents/Breadcrumb';
 import TypewriterEffect from '../reusableComponents/TypewriterEffect';
 

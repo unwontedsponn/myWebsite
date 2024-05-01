@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import Arrow from '../reusableComponents/sectionsAndElements/Arrow';
+import Arrow from '../reusableComponents/Arrow';
 import { useState, useEffect } from 'react';
 import Contact from './Contact';
 
@@ -11,8 +11,8 @@ export default function Header({ setCurrentSection }) {
   const [textIndex, setTextIndex] = useState(0);
 
   const textOptions = [
-    { text: 'benSpooner', sectionId: 'default', url: '/', navLinks: { link1: 'aboutMe', link2: 'myBook' } },
-    { text: 'sponn', sectionId: 'sponn', url: '/sponn', navLinks: { link1: 'myAnimations', link2: 'myScores' } },
+    { text: 'benSpooner', sectionId: 'benSpooner', navLinks: { link1: 'aboutMe', link2: 'myBook' } },
+    { text: 'sponn', sectionId: 'sponn', navLinks: { link1: 'myAnimations', link2: 'myScores' } },
     // { text: 'pktT', sectionId: 'pktTutor', url: '/pocket-tutor', navLinks: { link1: 'link1', link2: 'link2' } },
   ];
 

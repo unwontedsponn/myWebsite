@@ -1,15 +1,23 @@
 import Image from 'next/image';
-import Section from '../reusableComponents/sectionsAndElements/Section';
-import SmallScreenSection from '../reusableComponents/sectionsAndElements/SmallScreenSection';
-import LargeScreenSection from '../reusableComponents/sectionsAndElements/LargeScreenSection';
+import Section from '../reusableComponents/Section';
+import SmallScreenSection from '../reusableComponents/SmallScreenSection';
+import LargeScreenSection from '../reusableComponents/LargeScreenSection';
 import SlideFadeIn from '../reusableComponents/SlideFadeIn';
 import RotatingWords from '../reusableComponents/RotatingWords';
 
 // Checks the viewport height - after checking if the window object is defined
-if (typeof window !== 'undefined') {
-  window.addEventListener('resize', function() {
-    console.log(window.innerHeight);
-  });
+// if (typeof window !== 'undefined') {
+//   window.addEventListener('resize', function() {
+//     console.log(window.innerHeight);
+//   });
+// }
+
+const imageAttributes = {
+  src:'/images/homepage-pic.jpeg',
+  alt:"homepage picture",
+  width: 500,
+  height: 500,
+  priority: 'priority'
 }
 
 export default function Homepage() {
@@ -25,13 +33,7 @@ export default function Homepage() {
           </SlideFadeIn>
 
           <SlideFadeIn className="max-w-xs border-3 border-thick-border-gray image-max-width-xs-to-sm" direction="right"> 
-            <Image 
-              src='/images/homepage-pic.jpeg'
-              alt="homepage picture"
-              width={500} // Needs to be 500 to preserve correct ratio
-              height={500} // Needs to be 500 to preserve correct ratio
-              priority
-            />
+            <Image {...imageAttributes} />
           </SlideFadeIn>
           
           <SlideFadeIn direction="left">
@@ -59,13 +61,7 @@ export default function Homepage() {
 
           {/* Right Column */}
           <SlideFadeIn className="max-w-sm border-3 border-thick-border-gray" direction="right"> 
-            <Image 
-              src='/images/homepage-pic.jpeg'
-              alt="homepage picture"
-              width={500}
-              height={500}
-              priority
-            />
+            <Image {...imageAttributes} />
           </SlideFadeIn>
 
         </LargeScreenSection>

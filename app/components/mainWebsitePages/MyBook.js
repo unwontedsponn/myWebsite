@@ -1,7 +1,7 @@
 "use client"
-import Section from '../reusableComponents/sectionsAndElements/Section';
-import SmallScreenSection from '../reusableComponents/sectionsAndElements/SmallScreenSection';
-import LargeScreenSection from '../reusableComponents/sectionsAndElements/LargeScreenSection';
+import Section from '../reusableComponents/Section';
+import SmallScreenSection from '../reusableComponents/SmallScreenSection';
+import LargeScreenSection from '../reusableComponents/LargeScreenSection';
 import BookComponent from '../reusableComponents/BookComponent';
 import SlideFadeIn from '../reusableComponents/SlideFadeIn';
 import BuyNowLinks from '../reusableComponents/BuyNowLinks';
