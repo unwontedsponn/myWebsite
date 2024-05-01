@@ -1,5 +1,5 @@
-import Homepage from './Homepage';
-import AboutMe from './AboutMe';
+import Homepage from './Homepage/Homepage';
+import AboutMe from './aboutMe/AboutMe';
 import MyBook from './MyBook';
 import Sponn from './Sponn';
 import MyAnimations from './MyAnimations';

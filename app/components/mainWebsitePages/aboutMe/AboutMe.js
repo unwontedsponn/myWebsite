@@ -1,10 +1,11 @@
-import Section from '../reusableComponents/Section';
-import SmallScreenSection from '../reusableComponents/SmallScreenSection';
-import LargeScreenSection from '../reusableComponents/LargeScreenSection';
-import AboutMeText from '../reusableComponents/AboutMeText';
+import { imageAttributes } from './AboutMeContent';
+import Section from '../../reusableComponents/Section';
+import SmallScreenSection from '../../reusableComponents/SmallScreenSection';
+import LargeScreenSection from '../../reusableComponents/LargeScreenSection';
+import AboutMeSummaryText from './AboutMeText';
 import Image from 'next/image';
-import TypewriterEffect from '../reusableComponents/TypewriterEffect';
-import SlideFadeIn from '../reusableComponents/SlideFadeIn';
+import TypewriterEffect from '../../reusableComponents/TypewriterEffect';
+import SlideFadeIn from '../../reusableComponents/SlideFadeIn';
 
 export default function AboutMe() {
 
@@ -19,17 +20,10 @@ export default function AboutMe() {
           
 
           <SlideFadeIn className="max-w-xs" direction="left"> 
-            <Image 
-              id="piano-img"
-              src='/images/piano.png'
-              alt="Piano"
-              width={500}
-              height={500}
-              className="opacity-10"
-            />
+            <Image {...imageAttributes} />
           </SlideFadeIn>
 
-          <AboutMeText />
+          <AboutMeSummaryText />
 
         </SmallScreenSection>
 
@@ -43,18 +37,12 @@ export default function AboutMe() {
 
               <SlideFadeIn direction="right" className="color-dark-blue font-gopher-mono underline text-decoration-color text-4xl pl-32 tracking-largep whitespace-nowrap"><p className=""><TypewriterEffect text="A little bit about me..." /></p></SlideFadeIn>
 
-              <AboutMeText />
+              <AboutMeSummaryText />
             </div>
                             
             {/* Right Column */}
             <SlideFadeIn className="w-1/3" direction="right"> 
-              <Image 
-                src='/images/piano.png'
-                alt="Piano"
-                width={500}
-                height={500}
-                className="opacity-10"
-              />
+              <Image {...imageAttributes} />
             </SlideFadeIn>
 
         </LargeScreenSection>

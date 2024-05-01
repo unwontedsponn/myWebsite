@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Breadcrumb from "./Breadcrumb";
-import SlideFadeIn from "./SlideFadeIn";
+import Breadcrumb from "../../reusableComponents/Breadcrumb";
+import SlideFadeIn from "../../reusableComponents/SlideFadeIn";
 
-export default function AboutMeText({ }) {
+export default function AboutMeSummaryText({ }) {
 
   const [textIndex, setTextIndex] = useState(0); // State to control which text is shown
   const textOptions = [

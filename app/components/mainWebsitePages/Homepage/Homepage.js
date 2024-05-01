@@ -1,27 +1,12 @@
+import { smallText, longText, imageAttributes, words } from './HomepageContent';
 import Image from 'next/image';
-import Section from '../reusableComponents/Section';
-import SmallScreenSection from '../reusableComponents/SmallScreenSection';
-import LargeScreenSection from '../reusableComponents/LargeScreenSection';
-import SlideFadeIn from '../reusableComponents/SlideFadeIn';
-import RotatingWords from '../reusableComponents/RotatingWords';
-
-// Checks the viewport height - after checking if the window object is defined
-// if (typeof window !== 'undefined') {
-//   window.addEventListener('resize', function() {
-//     console.log(window.innerHeight);
-//   });
-// }
-
-const imageAttributes = {
-  src:'/images/homepage-pic.jpeg',
-  alt:"homepage picture",
-  width: 500,
-  height: 500,
-  priority: 'priority'
-}
+import Section from '../../reusableComponents/Section';
+import SmallScreenSection from '../../reusableComponents/SmallScreenSection';
+import LargeScreenSection from '../../reusableComponents/LargeScreenSection';
+import SlideFadeIn from '../../reusableComponents/SlideFadeIn';
+import RotatingWords from './RotatingWords';
 
 export default function Homepage() {
-  const words = ["things", "websites", "games", "music", "films", "books", "sketches"];
 
   return (
     <Section id="homepage">
@@ -48,7 +33,7 @@ export default function Homepage() {
           
           {/* Left Column */}
           <div id="title-div" className="flex flex-col">   
-              <SlideFadeIn direction="down" className="text-sm pl-36 color-green font-gopher-mono-semi tracking-mediumphomepage"><p>I like to get things done</p></SlideFadeIn>         
+              <SlideFadeIn direction="down" className="text-sm pl-36 color-green font-gopher-mono-semi tracking-mediumphomepage"><p>{smallText}</p></SlideFadeIn>         
 
               <SlideFadeIn direction="left" className="font-gopher-mono-semi color-blue leading-none xl:text-10xl mb-0"><p className="opacity-40">Hello,</p></SlideFadeIn>
 
@@ -56,7 +41,7 @@ export default function Homepage() {
 
               <SlideFadeIn direction="left" className="font-gopher-mono-semi color-blue leading-none text-11xl pb-0"><p className="opacity-40">I&apos;m Ben</p></SlideFadeIn>
 
-              <SlideFadeIn direction="up" className="pl-28 color-dark font-gopher-mono tracking-smallphomepage text-xs max-w-2xl">I thrive on bringing ideas to life. From creating books and games to websites and musical pieces, I&apos;m fuelled by a passion for creative endeavours, and <span className="italic">getting things done</span></SlideFadeIn>
+              <SlideFadeIn direction="up" className="pl-28 color-dark font-gopher-mono tracking-smallphomepage text-xs max-w-2xl">{longText}</SlideFadeIn>
           </div>
 
           {/* Right Column */}
