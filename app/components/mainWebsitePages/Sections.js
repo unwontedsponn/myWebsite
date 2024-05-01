@@ -10,7 +10,7 @@ import PktTutor from './PktTutor';
 const sectionComponents = {
   benSpooner: [Homepage, AboutMe, MyBook], 
   sponn: [Sponn, MyAnimations, MyScores], 
-  pktTutor: [PktTutor],  
+  // pktTutor: [PktTutor],  
 };
 
 // Takes the current section and renders the corresponding components.
