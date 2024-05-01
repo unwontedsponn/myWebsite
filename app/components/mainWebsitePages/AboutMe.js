@@ -6,7 +6,7 @@ import Image from 'next/image';
 import TypewriterEffect from '../reusableComponents/TypewriterEffect';
 import SlideFadeIn from '../reusableComponents/SlideFadeIn';
 
-export default function About() {
+export default function AboutMe() {
 
   return (
       <Section id="aboutMe">

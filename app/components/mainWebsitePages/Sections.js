@@ -1,6 +1,6 @@
 import Homepage from './Homepage';
-import About from './AboutMe';
-import Book from './MyBook';
+import AboutMe from './AboutMe';
+import MyBook from './MyBook';
 import Sponn from './Sponn';
 import MyAnimations from './MyAnimations';
 import MyScores from './MyScores';
@@ -8,7 +8,7 @@ import PktTutor from './PktTutor';
 
 // This object determines which components to render based on the current section selected.
 const sectionComponents = {
-  benSpooner: [Homepage, About, Book], 
+  benSpooner: [Homepage, AboutMe, MyBook], 
   sponn: [Sponn, MyAnimations, MyScores], 
   pktTutor: [PktTutor],  
 };

@@ -15,7 +15,7 @@ export default function Header({ setCurrentSection }) {
   const textOptions = [
     { text: 'benSpooner', sectionId: 'default', url: '/', navLinks: { link1: 'aboutMe', link2: 'myBook' } },
     { text: 'sponn', sectionId: 'sponn', url: '/sponn', navLinks: { link1: 'myAnimations', link2: 'myScores' } },
-    { text: 'pktT', sectionId: 'pktTutor', url: '/pocket-tutor', navLinks: { link1: 'link1', link2: 'link2' } },
+    // { text: 'pktT', sectionId: 'pktTutor', url: '/pocket-tutor', navLinks: { link1: 'link1', link2: 'link2' } },
   ];
 
   // Effect to adjust the CSS variable based on the header's height upon component mount/update

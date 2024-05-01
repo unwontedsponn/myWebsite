@@ -6,7 +6,7 @@ import BookComponent from '../reusableComponents/BookComponent';
 import SlideFadeIn from '../reusableComponents/SlideFadeIn';
 import BuyNowLinks from '../reusableComponents/BuyNowLinks';
 
-export default function Book() {
+export default function MyBook() {
 
   return (
       <Section id="myBook">
