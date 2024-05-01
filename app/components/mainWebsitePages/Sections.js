@@ -1,6 +1,6 @@
 import Homepage from './Homepage/Homepage';
 import AboutMe from './aboutMe/AboutMe';
-import MyBook from './MyBook';
+import MyBook from './myBook/MyBook';
 import Sponn from './Sponn';
 import MyAnimations from './MyAnimations';
 import MyScores from './MyScores';
