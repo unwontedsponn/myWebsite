@@ -1,9 +1,9 @@
-import Section from '../reusableComponents/Section';
-import SmallScreenSection from '../reusableComponents/SmallScreenSection';
-import LargeScreenSection from '../reusableComponents/LargeScreenSection';
+import Section from '../../reusableComponents/Section';
+import SmallScreenSection from '../../reusableComponents/SmallScreenSection';
+import LargeScreenSection from '../../reusableComponents/LargeScreenSection';
 import Image from 'next/image';
-import TypewriterEffect from '../reusableComponents/TypewriterEffect';
-import SlideFadeIn from '../reusableComponents/SlideFadeIn';
+import TypewriterEffect from '../../reusableComponents/TypewriterEffect';
+import SlideFadeIn from '../../reusableComponents/SlideFadeIn';
 
 const smallText = 'Drummer, pianist, composer';
 const longText = (

@@ -1,8 +1,8 @@
 "use client"
 import Link from 'next/link';
-import Arrow from '../reusableComponents/Arrow';
+import Arrow from './Arrow';
 import { useState, useEffect } from 'react';
-import Contact from './Contact';
+import Contact from '../Contact/Contact';
 
 export default function Header({ setCurrentSection }) {
   

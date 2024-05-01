@@ -1,9 +1,9 @@
 "use client"
 import { useState } from 'react';
 import './globals.css';
-import Header from "./components/mainWebsitePages/Header";
-import Sections from './components/mainWebsitePages/Sections';
-import Footer from './components/mainWebsitePages/Footer';
+import Header from "./components/Header/Header";
+import Sections from './components/Sections';
+import Footer from './components/Footer/Footer';
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('benSpooner');

@@ -3,8 +3,8 @@ import Section from '../reusableComponents/Section';
 import SmallScreenSection from '../reusableComponents/SmallScreenSection';
 import { useState, useEffect, useCallback } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { combinations } from '../pktTutorPatterns/six-3-2';
-import { fourCombinations } from '../pktTutorPatterns/four-3-2';
+import { combinations } from './pktTutorPatterns/six-3-2';
+import { fourCombinations } from './pktTutorPatterns/four-3-2';
 import Card from '../reusableComponents/Card';
 import Image from 'next/image';
 

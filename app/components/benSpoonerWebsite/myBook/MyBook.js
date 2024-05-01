@@ -5,7 +5,7 @@ import SmallScreenSection from '../../reusableComponents/SmallScreenSection';
 import LargeScreenSection from '../../reusableComponents/LargeScreenSection';
 import BookComponent from './BookComponent';
 import SlideFadeIn from '../../reusableComponents/SlideFadeIn';
-import BuyNowLinks from '../../reusableComponents/BuyNowLinks';
+import BuyNowLinks from './BuyNowLinks';
 
 export default function MyBook() {
 
