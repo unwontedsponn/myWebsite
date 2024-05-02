@@ -67,15 +67,10 @@ html {scroll-behavior: smooth;}
 * Media Queries
 */
 /*--------------------------------------------------------------------------------------------------------------------*/
+/* For screens smaller in height that 760px */
 @media only screen and (max-height: 760px) {
-  #homepage-hello-text,
-  #homepage-im-ben-text,
   #piano-img {
     display: none;
-  }
-
-  .image-max-width-xs-to-sm {
-    max-width: 24rem; /* equivalent to Tailwind's max-w-sm */
   }
 }
 

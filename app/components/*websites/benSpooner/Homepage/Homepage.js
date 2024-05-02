@@ -1,3 +1,4 @@
+import styles from './Homepage.module.css';
 import { smallText, longText, imageAttributes, words } from './HomepageContent';
 import Image from 'next/image';
 import Section from '../../../utilityComponents/Section';
@@ -14,15 +15,15 @@ export default function Homepage() {
         <SmallScreenSection className="">
 
           <SlideFadeIn direction="left">
-            <h1 id="homepage-hello-text" className="text-center font-gopher-mono-semi opacity-40 color-blue text-6xl">Hello,</h1>
+            <h1 className={`${styles.homepageHelloText} text-center font-gopher-mono-semi opacity-40 color-blue text-6xl`}>Hello,</h1>
           </SlideFadeIn>
 
-          <SlideFadeIn className="max-w-xs border-3 border-thick-border-gray image-max-width-xs-to-sm" direction="right"> 
+          <SlideFadeIn className={`${styles.homepageImage2xs} max-w-xs border-3 border-thick-border-gray`} direction="right"> 
             <Image {...imageAttributes} />
           </SlideFadeIn>
           
           <SlideFadeIn direction="left">
-            <h1 id="homepage-im-ben-text" className="flex justify-center font-gopher-mono-semi opacity-40 color-blue text-7xl whitespace-nowrap">{`I'm Ben`}</h1>
+            <h1 className={`${styles.homepageImBenText} flex justify-center font-gopher-mono-semi opacity-40 color-blue text-7xl whitespace-nowrap`}>{`I'm Ben`}</h1>
           </SlideFadeIn>
 
         </SmallScreenSection>

@@ -1,0 +1,11 @@
+/* For screens smaller in height that 760px */
+@media only screen and (max-height: 760px) {
+  .homepageHelloText,
+  .homepageImBenText {
+    display: none;
+  }
+
+  .homepageImage2xs {
+    max-width: 24rem; /* equivalent to Tailwind's max-w-sm */
+  }
+}
