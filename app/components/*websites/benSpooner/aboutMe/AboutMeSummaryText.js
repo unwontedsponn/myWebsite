@@ -3,8 +3,10 @@ import Breadcrumb from "../../../utilityComponents/Breadcrumb";
 import SlideFadeIn from "../../../utilityComponents/SlideFadeIn";
 
 export default function AboutMeSummaryText({ }) {
-
   const [textIndex, setTextIndex] = useState(0); // State to control which text is shown
+  const [touchStart, setTouchStart] = useState(null); // State to hold the starting X position of a touch
+  const [touchEnd, setTouchEnd] = useState(null); // State to hold the ending X position of a touch
+  
   const textOptions = [
     <>
       <p>Hello there! I&apos;m <span className="font-gopher-mono-semi">Ben Spooner</span>, a musician, javascript enthusiast and technical support engineer at Neat. My journey into the tech world was anything but conventional. After a successful 15-year tenure as a business owner providing music and audio services, I embarked on a new adventure in web development. This leap of faith was bolstered when I secured a scholarship for a highly competitive Software Engineering & Data Science course, standing out among 20,000 applicants.</p>
@@ -40,8 +42,28 @@ export default function AboutMeSummaryText({ }) {
     setTextIndex(current => (current + 1) % textOptions.length); // Increment text index, wrap around
   };
 
+  const previousPage = () => {
+    setTextIndex(current => (current - 1 + textOptions.length) % textOptions.length); // Decrement text index, wrap around
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    setTouchEnd(e.changedTouches[0].clientX);
+    if (touchStart - touchEnd > 50) {
+      // Right to Left swipe
+      nextPage();
+    }
+    if (touchStart - touchEnd < -50) {
+      // Left to Right swipe
+      previousPage();
+    }
+  };
+
   return (
-    <div className="flex flex-row pt-6 max-w-3xl">
+    <div className="flex flex-row pt-6 max-w-3xl" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
 
       <div className="flex flex-col w-full text-left xl:text-right px-2">
         <SlideFadeIn direction="up">
