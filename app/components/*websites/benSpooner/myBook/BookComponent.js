@@ -2,8 +2,8 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import SlideFadeIn from '../../reusableComponents/SlideFadeIn';
-import Breadcrumb from '../../reusableComponents/Breadcrumb';
+import SlideFadeIn from '../../../utilityComponents/SlideFadeIn';
+import Breadcrumb from '../../../utilityComponents/Breadcrumb';
 
 export default function BookComponent({ width, height, direction, minWidth, maxWidth }) {
 

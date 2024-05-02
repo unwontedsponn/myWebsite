@@ -1,4 +1,4 @@
-import SlideFadeIn from "../../reusableComponents/SlideFadeIn";
+import SlideFadeIn from "../../../utilityComponents/SlideFadeIn";
 
 export default function BuyNowLinks({itemsCenter}) {
   return (

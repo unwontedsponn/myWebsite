@@ -1,9 +1,9 @@
 "use client"
-import Section from '../../reusableComponents/Section';
-import SmallScreenSection from '../../reusableComponents/SmallScreenSection';
+import Section from '../../../utilityComponents/Section';
+import SmallScreenSection from '../../../utilityComponents/SmallScreenSection';
 import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import TypewriterEffect from '../../reusableComponents/TypewriterEffect';
+import TypewriterEffect from '../../../utilityComponents/TypewriterEffect';
 
 export default function Game() {
   

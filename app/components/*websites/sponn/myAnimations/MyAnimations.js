@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import Section from '../../reusableComponents/Section';
-import SmallScreenSection from '../../reusableComponents/SmallScreenSection';
-import LargeScreenSection from '../../reusableComponents/LargeScreenSection';
-import SlideFadeIn from '../../reusableComponents/SlideFadeIn';
-import YouTubeVideo from '../../reusableComponents/YouTubeVideo'; // Import the YouTubeVideo component
-import Breadcrumb from '../../reusableComponents/Breadcrumb';
-import TypewriterEffect from '../../reusableComponents/TypewriterEffect';
+import Section from '../../../utilityComponents/Section';
+import SmallScreenSection from '../../../utilityComponents/SmallScreenSection';
+import LargeScreenSection from '../../../utilityComponents/LargeScreenSection';
+import SlideFadeIn from '../../../utilityComponents/SlideFadeIn';
+import YouTubeVideo from '../../../utilityComponents/YouTubeVideo'; // Import the YouTubeVideo component
+import Breadcrumb from '../../../utilityComponents/Breadcrumb';
+import TypewriterEffect from '../../../utilityComponents/TypewriterEffect';
 
 export default function MyAnimations() {
   const videos = [

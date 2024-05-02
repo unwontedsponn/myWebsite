@@ -1,11 +1,11 @@
 "use client";
-import Section from '../reusableComponents/Section';
-import SmallScreenSection from '../reusableComponents/SmallScreenSection';
+import Section from '../../utilityComponents/Section';
+import SmallScreenSection from '../../utilityComponents/SmallScreenSection';
 import { useState, useEffect, useCallback } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { combinations } from './pktTutorPatterns/six-3-2';
 import { fourCombinations } from './pktTutorPatterns/four-3-2';
-import Card from '../reusableComponents/Card';
+import Card from '../../utilityComponents/Card';
 import Image from 'next/image';
 
 const getRandomIndex = (array) => Math.floor(Math.random() * array.length);

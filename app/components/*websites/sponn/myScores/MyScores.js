@@ -1,9 +1,9 @@
-import Section from '../../reusableComponents/Section';
-import SmallScreenSection from '../../reusableComponents/SmallScreenSection';
-import LargeScreenSection from '../../reusableComponents/LargeScreenSection';
-import SlideFadeIn from '../../reusableComponents/SlideFadeIn';
-import TypewriterEffect from '../../reusableComponents/TypewriterEffect';
-import Breadcrumb from '../../reusableComponents/Breadcrumb';
+import Section from '../../../utilityComponents/Section';
+import SmallScreenSection from '../../../utilityComponents/SmallScreenSection';
+import LargeScreenSection from '../../../utilityComponents/LargeScreenSection';
+import SlideFadeIn from '../../../utilityComponents/SlideFadeIn';
+import TypewriterEffect from '../../../utilityComponents/TypewriterEffect';
+import Breadcrumb from '../../../utilityComponents/Breadcrumb';
 
 export default function MyScores() {
 

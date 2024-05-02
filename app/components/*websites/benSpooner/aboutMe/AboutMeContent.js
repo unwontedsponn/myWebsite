@@ -1,4 +1,5 @@
 export const imageAttributes = {
+  id: 'piano-img',
   src:'/images/piano.png',
   alt:"Piano",
   width:500,

@@ -1,11 +1,11 @@
 import { imageAttributes } from './AboutMeContent';
-import Section from '../../reusableComponents/Section';
-import SmallScreenSection from '../../reusableComponents/SmallScreenSection';
-import LargeScreenSection from '../../reusableComponents/LargeScreenSection';
-import AboutMeSummaryText from './AboutMeText';
+import Section from '../../../utilityComponents/Section';
+import SmallScreenSection from '../../../utilityComponents/SmallScreenSection';
+import LargeScreenSection from '../../../utilityComponents/LargeScreenSection';
+import AboutMeSummaryText from './AboutMeSummaryText';
 import Image from 'next/image';
-import TypewriterEffect from '../../reusableComponents/TypewriterEffect';
-import SlideFadeIn from '../../reusableComponents/SlideFadeIn';
+import TypewriterEffect from '../../../utilityComponents/TypewriterEffect';
+import SlideFadeIn from '../../../utilityComponents/SlideFadeIn';
 
 export default function AboutMe() {
 

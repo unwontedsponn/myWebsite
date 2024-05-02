@@ -1,10 +1,10 @@
 "use client"
 import { bookBlurbText } from './MyBookContent';
-import Section from '../../reusableComponents/Section';
-import SmallScreenSection from '../../reusableComponents/SmallScreenSection';
-import LargeScreenSection from '../../reusableComponents/LargeScreenSection';
+import Section from '../../../utilityComponents/Section';
+import SmallScreenSection from '../../../utilityComponents/SmallScreenSection';
+import LargeScreenSection from '../../../utilityComponents/LargeScreenSection';
 import BookComponent from './BookComponent';
-import SlideFadeIn from '../../reusableComponents/SlideFadeIn';
+import SlideFadeIn from '../../../utilityComponents/SlideFadeIn';
 import BuyNowLinks from './BuyNowLinks';
 
 export default function MyBook() {

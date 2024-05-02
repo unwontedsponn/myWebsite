@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Breadcrumb from "../../reusableComponents/Breadcrumb";
-import SlideFadeIn from "../../reusableComponents/SlideFadeIn";
+import Breadcrumb from "../../../utilityComponents/Breadcrumb";
+import SlideFadeIn from "../../../utilityComponents/SlideFadeIn";
 
 export default function AboutMeSummaryText({ }) {
 
