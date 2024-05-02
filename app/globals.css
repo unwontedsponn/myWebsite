@@ -64,17 +64,6 @@ html {scroll-behavior: smooth;}
 .flashing-text {animation: flashAnimation 1s linear infinite;}
 
 /**
-* Media Queries
-*/
-/*--------------------------------------------------------------------------------------------------------------------*/
-/* For screens smaller in height that 760px */
-@media only screen and (max-height: 760px) {
-  #piano-img {
-    display: none;
-  }
-}
-
-/**
 * :Hover and Text decoration
 */
 /*--------------------------------------------------------------------------------------------------------------------*/

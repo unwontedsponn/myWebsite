@@ -1,4 +1,4 @@
-import styles from './Homepage.module.css';
+import ResponsiveVisibility from '@/app/components/utilityComponents/ResponsiveVisibility';
 import { smallText, longText, imageAttributes, words } from './HomepageContent';
 import Image from 'next/image';
 import Section from '../../../utilityComponents/Section';
@@ -15,15 +15,19 @@ export default function Homepage() {
         <SmallScreenSection className="">
 
           <SlideFadeIn direction="left">
-            <h1 className={`${styles.homepageHelloText} text-center font-gopher-mono-semi opacity-40 color-blue text-6xl`}>Hello,</h1>
+            <ResponsiveVisibility minHeight={760}>
+              <h1 className={`text-center font-gopher-mono-semi opacity-40 color-blue text-6xl`}>Hello,</h1>
+            </ResponsiveVisibility>
           </SlideFadeIn>
 
-          <SlideFadeIn className={`${styles.homepageImage2xs} max-w-xs border-3 border-thick-border-gray`} direction="right"> 
+          <SlideFadeIn className={`max-w-xs border-3 border-thick-border-gray`} direction="right"> 
             <Image {...imageAttributes} />
           </SlideFadeIn>
           
           <SlideFadeIn direction="left">
-            <h1 className={`${styles.homepageImBenText} flex justify-center font-gopher-mono-semi opacity-40 color-blue text-7xl whitespace-nowrap`}>{`I'm Ben`}</h1>
+            <ResponsiveVisibility minHeight={760}>
+              <h1 className={`flex justify-center font-gopher-mono-semi opacity-40 color-blue text-7xl whitespace-nowrap`}>{`I'm Ben`}</h1>
+            </ResponsiveVisibility>
           </SlideFadeIn>
 
         </SmallScreenSection>

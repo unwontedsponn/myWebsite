@@ -1,10 +1,10 @@
-import Homepage from './*websites/benSpooner/Homepage/Homepage';
-import AboutMe from './*websites/benSpooner/aboutMe/AboutMe';
-import MyBook from './*websites/benSpooner/myBook/MyBook';
-import Sponn from './*websites/sponn/sponnHomepage/Sponn';
-import MyAnimations from './*websites/sponn/myAnimations/MyAnimations';
-import MyScores from './*websites/sponn/myScores/MyScores';
-import PktTutor from './*websites/pktT/PktTutor';
+import Homepage from './components/*websites/benSpooner/Homepage/Homepage';
+import AboutMe from './components/*websites/benSpooner/aboutMe/AboutMe';
+import MyBook from './components/*websites/benSpooner/myBook/MyBook';
+import Sponn from './components/*websites/sponn/sponnHomepage/Sponn';
+import MyAnimations from './components/*websites/sponn/myAnimations/MyAnimations';
+import MyScores from './components/*websites/sponn/myScores/MyScores';
+import PktTutor from './components/*websites/pktT/PktTutor';
 
 // This object determines which components to render based on the current section selected.
 const sectionComponents = {

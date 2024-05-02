@@ -1,3 +1,5 @@
+import styles from './AboutMe.module.css';
+
 export const imageAttributes = {
   id: 'piano-img',
   src:'/images/piano.png',

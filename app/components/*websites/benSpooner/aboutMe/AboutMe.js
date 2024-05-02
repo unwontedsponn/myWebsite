@@ -1,3 +1,4 @@
+import ResponsiveVisibility from '@/app/components/utilityComponents/ResponsiveVisibility';
 import { imageAttributes } from './AboutMeContent';
 import Section from '../../../utilityComponents/Section';
 import SmallScreenSection from '../../../utilityComponents/SmallScreenSection';
@@ -19,8 +20,10 @@ export default function AboutMe() {
           </SlideFadeIn>
           
 
-          <SlideFadeIn className="max-w-xs" direction="left"> 
-            <Image {...imageAttributes} />
+          <SlideFadeIn className={`max-w-xs`} direction="left"> 
+            <ResponsiveVisibility minHeight={760}>
+              <Image {...imageAttributes}/>
+            </ResponsiveVisibility>
           </SlideFadeIn>
 
           <AboutMeSummaryText />
