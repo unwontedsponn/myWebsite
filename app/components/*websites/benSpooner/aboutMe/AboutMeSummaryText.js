@@ -69,7 +69,7 @@ export default function AboutMeSummaryText({ }) {
         <SlideFadeIn direction="up">
           <div 
             className="color-dark font-gopher-mono text-xs sm:text-sm cursor-pointer"
-            onClick={nextPage}
+            // onClick={nextPage}
           >
             {textOptions[textIndex]}
           </div>
