@@ -36,7 +36,7 @@ export default function Sponn() {
           </SlideFadeIn>
 
           <SlideFadeIn direction="right" className="color-dark-blue font-gopher-mono underline text-decoration-color text-2xl tracking-largep whitespace-nowrap">
-            <p className=""><TypewriterEffect text="my jazzy musings" /></p>
+            <p className=""><TypewriterEffect text="some jazzy musings..." /></p>
           </SlideFadeIn>
 
         </SmallScreenSection>

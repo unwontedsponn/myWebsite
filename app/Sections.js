@@ -2,14 +2,15 @@ import Homepage from './components/*websites/benSpooner/Homepage/Homepage';
 import AboutMe from './components/*websites/benSpooner/aboutMe/AboutMe';
 import MyBook from './components/*websites/benSpooner/myBook/MyBook';
 import Sponn from './components/*websites/sponn/sponnHomepage/Sponn';
-import MyAnimations from './components/*websites/sponn/myAnimations/MyAnimations';
+import MyMusic from './components/*websites/sponn/myMusic/myMusic';
+import MyAnimations from './components/*websites/sponn/myFilms/MyFilms';
 import MyScores from './components/*websites/sponn/myScores/MyScores';
 import PktTutor from './components/*websites/pktT/PktTutor';
 
 // This object determines which components to render based on the current section selected.
 const sectionComponents = {
   benSpooner: [Homepage, AboutMe, MyBook], 
-  sponn: [Sponn, MyAnimations, MyScores], 
+  sponn: [Sponn, MyMusic, MyAnimations], 
   // pktTutor: [PktTutor],  
 };
 

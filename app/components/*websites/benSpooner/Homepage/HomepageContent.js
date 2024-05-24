@@ -7,7 +7,6 @@ export const longText = (
   </p>
 );
 
-
 export const imageAttributes = {
   src: '/images/homepage-pic.jpeg',
   alt: "homepage picture",
@@ -16,7 +15,7 @@ export const imageAttributes = {
   priority: 'priority'
 };
 
-export const words = ["things", "websites", "games", "music", "films", "books", "sketches"];
+export const words = ["things", "websites", "music", "books", "films", "games", "sketches"];
 
 // Checks the viewport height - after checking if the window object is defined
 // if (typeof window !== 'undefined') {
