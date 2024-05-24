@@ -15,8 +15,9 @@ export default function MyMusic() {
       title: 'Left Where Found',
       summary: 'akjfhblaskdfblaksbgfkalsbgask;gna;ksgfa;ksdgfhekraakjfhblaskdfblaksbgfkalsbgask;gna;ksgfa;ksdgfhekra',
       tracks: [
-        { url: '/music/track5.mp3', title: 'Track 5' },
-        { url: '/music/track6.mp3', title: 'Track 6' },
+        { url: '/sponnMusic/lwf/Ablaze.wav', title: 'Ablaze' },
+        { url: '/sponnMusic/lwf/Forget Me.wav', title: 'Forget Me' },
+        { url: '/sponnMusic/lwf/Moment Before.wav', title: 'Moment Before' },
       ],
     },
     {
@@ -36,8 +37,12 @@ export default function MyMusic() {
       title: 'Keep The Music Alive',
       summary: 'akjfhblaskdfblaksbgfkalsbgask;gna;ksgfa;ksdgfhekraakjfhblaskdfblaksbgfkalsbgask;gna;ksgfa;ksdgfhekra',
       tracks: [
-        { url: '/sponnMusic/atgb/1. For The Taking.wav', title: 'For The Taking' },
-        { url: '/music/track4.mp3', title: 'Track 4' },
+        { url: '/sponnMusic/ktma/1. For The Taking.wav', title: 'For The Taking' },
+        { url: '/sponnMusic/ktma/2. All Change.wav', title: 'All Change' },
+        { url: '/sponnMusic/ktma/3. Apprehension.wav', title: 'Apprehension' },
+        { url: '/sponnMusic/ktma/4. Resolveg.wav', title: 'Resolve' },
+        { url: '/sponnMusic/ktma/5. Crystalline.wav', title: 'Crystalline' },
+        { url: '/sponnMusic/ktma/6. Twilight.wav', title: 'Twilight' },
       ],
     },
     {
@@ -46,8 +51,17 @@ export default function MyMusic() {
       title: 'Long Way Round',
       summary: 'akjfhblaskdfblaksbgfkalsbgask;gna;ksgfa;ksdgfhekraakjfhblaskdfblaksbgfkalsbgask;gna;ksgfa;ksdgfhekra',
       tracks: [
-        { url: '/music/track7.mp3', title: 'Track 7' },
-        { url: '/music/track8.mp3', title: 'Track 8' },
+        { url: '/sponnMusic/lwr/1. the odds.wav', title: 'The Odds' },
+        { url: '/sponnMusic/lwr/2. strinde.wav', title: 'Strinde' },
+        { url: '/sponnMusic/lwr/3. in the dark.wav', title: 'In The Dark' },
+        { url: '/sponnMusic/lwr/4. northern lights.wav', title: 'Northern Lights' },
+        { url: '/sponnMusic/lwr/5. coco.wav', title: 'Coco' },
+        { url: '/sponnMusic/lwr/6. welcome to the world.wav', title: 'Welcome To The World' },
+        { url: '/sponnMusic/lwr/7. salvation.wav', title: 'Salvation' },
+        { url: '/sponnMusic/lwr/8. sur.wav', title: 'Sur' },
+        { url: '/sponnMusic/lwr/9. through fingers.wav', title: 'Through Fingers' },
+        { url: '/sponnMusic/lwr/10. one thing that i need.wav', title: 'One Thing That I Need' },
+        { url: '/sponnMusic/lwr/11. thank you and good night.wav', title: 'Thank You and Good Night' },
       ],
     },
     {
@@ -56,18 +70,16 @@ export default function MyMusic() {
       title: 'This Now This',
       summary: 'akjfhblaskdfblaksbgfkalsbgask;gna;ksgfa;ksdgfhekraakjfhblaskdfblaksbgfkalsbgask;gna;ksgfa;ksdgfhekra',
       tracks: [
-        { url: '/music/track9.mp3', title: 'Track 9' },
-        { url: '/music/track10.mp3', title: 'Track 10' },
+        { url: '/sponnMusic/tnt/this now this.wav', title: 'Thank You and Good Night' },
       ],
     },
     {
-      src: '/images/sponnAlbumArtwork/wef.jpg',
-      alt: 'When We Fellef',
+      src: '/images/sponnAlbumArtwork/wwf.jpg',
+      alt: 'When We Fell',
       title: 'When We Fell',
       summary: 'akjfhblaskdfblaksbgfkalsbgask;gna;ksgfa;ksdgfhekraakjfhblaskdfblaksbgfkalsbgask;gna;ksgfa;ksdgfhekra',
       tracks: [
-        { url: '/music/track11.mp3', title: 'Track 11' },
-        { url: '/music/track12.mp3', title: 'Track 12' },
+        { url: '/sponnMusic/wwf/when we fell', title: 'When We Fell' },
       ],
     },
   ];
