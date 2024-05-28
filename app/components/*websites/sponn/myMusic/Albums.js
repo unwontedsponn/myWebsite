@@ -172,7 +172,7 @@ const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, setActiveView
 
               {/* Listen to the Music Tracks */}
               {activeView === 'listen' && (
-                <div className="overflow-y-auto" style={{ maxHeight: '10rem' }}>
+                <div className="overflow-y-auto" style={{ maxHeight: '11rem' }}>
                   {currentAlbum.tracks.map((track, index) => (
                     <div key={index} className="my-2 flex items-center justify-between">
                       <h3 className="text-lg">{`- ${track.title}`}</h3>
@@ -184,8 +184,27 @@ const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, setActiveView
                         </button>
                     </div>
                   ))}
+                  {/* Volume Slider */}
+                  <div className="pt-2 border-t">
+                    <p className="text-xs text-center font-gopher-mono">Volume Slider</p>
+                    <input
+                      type="range"
+                      id="volume"
+                      name="volume"
+                      min="0"
+                      max="1"
+                      step="0.01"
+                      value={volume}
+                      onChange={handleVolumeChange}
+                      className="w-full"
+                      style={{ backgroundColor: 'transparent' }}
+                    />
+                  </div>
                 </div>
+                
               )}
+
+              
 
               {/* Watch the Transcriptions */}
               {activeView === 'transcriptions' && currentAlbum.transcription && (
@@ -219,23 +238,7 @@ const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, setActiveView
                     </div>
                   ))}
                 </div>
-              )}
-
-              <div className="pt-2 border-t">
-                <p className="text-xs text-center font-gopher-mono">Volume Slider</p>
-                <input
-                  type="range"
-                  id="volume"
-                  name="volume"
-                  min="0"
-                  max="1"
-                  step="0.01"
-                  value={volume}
-                  onChange={handleVolumeChange}
-                  className="w-full"
-                  style={{ backgroundColor: 'transparent' }}
-                />
-              </div>
+              )}              
             </div>
           </div>
           <Breadcrumb
