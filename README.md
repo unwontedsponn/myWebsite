@@ -1,0 +1,2 @@
+Issues that need to be addressed
+- myMusic modal... when there are more than 3 pieces, the modal gets slightly bigger, causing there to be a difference in height when scrolling through the albums. In addition, the scroll bar when scrolling through the pieces conflicts with the buttons, needs to be more to the righthandside. and it is not obvious to the user that scrolling is an options on the albums with more than 3 songs.
