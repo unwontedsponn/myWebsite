@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Section from '../../../utilityComponents/Section';
+import SmallScreenSection from '../../../utilityComponents/SmallScreenSection';
 import LargeScreenSection from '../../../utilityComponents/LargeScreenSection';
 import SlideFadeIn from '../../../utilityComponents/SlideFadeIn';
 import TypewriterEffect from '@/app/components/utilityComponents/TypewriterEffect';
@@ -11,6 +12,7 @@ export default function MyMusic() {
       src: '/images/sponnAlbumArtwork/lwf.jpg',
       alt: 'Left Where Found',
       title: 'Left Where Found',
+      albumType: 'E.P',
       summary: '',
       tracks: [
         { url: '/sponnMusic/lwf/Ablaze.wav', title: 'Ablaze' },
@@ -22,12 +24,31 @@ export default function MyMusic() {
         { src: 'https://www.youtube.com/watch?v=dGM3eX_edB0&ab_channel=BenSpooner', title: 'Forget Me' },        
         { src: 'https://www.youtube.com/watch?v=y0ucm2FSpao&ab_channel=BenSpooner', title: 'Moment Before' },        
       ],
-      shortFilm: false
+      shortFilm: false,
+      game: false,
+    },
+    {
+      src: '/images/sponnAlbumArtwork/wwf.jpg',
+      alt: 'When We Fell',
+      title: 'When We Fell',
+      albumType: 'Single',
+      summary: '',
+      tracks: [
+        { url: '/sponnMusic/wwf/when we fell.wav', title: 'When We Fell' },
+      ],
+      transcription: [
+        { src: 'https://www.youtube.com/watch?v=sYrvUKESY2A&ab_channel=BenSpooner', title: 'When We Fell' },                
+      ],
+      shortFilm: [
+        { src: 'https://www.youtube.com/watch?v=XenuFH6qTdM&t=111s&ab_channel=BenSpooner', title: 'When We Fell' },                
+      ],
+      game: false,
     },
     {
       src: '/images/sponnAlbumArtwork/atgb.jpeg',
       alt: 'As Time Goes By',
       title: 'As Time Goes By',
+      albumType: 'E.P',
       summary: '',
       tracks: [      
         { url: '/sponnMusic/atgb/All Along.wav', title: 'All Along' },
@@ -42,50 +63,13 @@ export default function MyMusic() {
       shortFilm: [
         { src: 'https://www.youtube.com/watch?v=DRqjaJgaO_E&ab_channel=BenSpooner', title: 'So It Goes' },                
       ],
-    },
-    {
-      src: '/images/sponnAlbumArtwork/ktma.png',
-      alt: 'Keep The Music Alive',
-      title: 'Keep The Music Alive',
-      summary: '',
-      tracks: [
-        { url: '/sponnMusic/ktma/1. For The Taking.wav', title: 'For The Taking' },
-        { url: '/sponnMusic/ktma/2. All Change.wav', title: 'All Change' },
-        { url: '/sponnMusic/ktma/3. Apprehension.wav', title: 'Apprehension' },
-        { url: '/sponnMusic/ktma/4. Resolveg.wav', title: 'Resolve' },
-        { url: '/sponnMusic/ktma/5. Crystalline.wav', title: 'Crystalline' },
-        { url: '/sponnMusic/ktma/6. Twilight.wav', title: 'Twilight' },
-      ],
-      transcription: [
-        { src: 'https://www.youtube.com/watch?v=8JiFKQNVny0&ab_channel=BenSpooner', title: 'For The Taking' },                
-      ],
-      shortFilm: false
-    },
-    {
-      src: '/images/sponnAlbumArtwork/lwr.jpg',
-      alt: 'Long Way Round',
-      title: 'Long Way Round',
-      summary: '',
-      tracks: [
-        { url: '/sponnMusic/lwr/1. the odds.wav', title: 'The Odds' },
-        { url: '/sponnMusic/lwr/2. strinde.wav', title: 'Strinde' },
-        { url: '/sponnMusic/lwr/3. in the dark.wav', title: 'In The Dark' },
-        { url: '/sponnMusic/lwr/4. northern lights.wav', title: 'Northern Lights' },
-        { url: '/sponnMusic/lwr/5. coco.wav', title: 'Coco' },
-        { url: '/sponnMusic/lwr/6. welcome to the world.wav', title: 'Welcome To The World' },
-        { url: '/sponnMusic/lwr/7. salvation.wav', title: 'Salvation' },
-        { url: '/sponnMusic/lwr/8. sur.wav', title: 'Sur' },
-        { url: '/sponnMusic/lwr/9. through fingers.wav', title: 'Through Fingers' },
-        { url: '/sponnMusic/lwr/10. one thing that i need.wav', title: 'One Thing That I Need' },
-        { url: '/sponnMusic/lwr/11. thank you and good night.wav', title: 'Thank You and Good Night' },
-      ],
-      transcription: false,
-      shortFilm: false
+      game: false,
     },
     {
       src: '/images/sponnAlbumArtwork/tnt.jpg',
       alt: 'This Now This',
       title: 'This Now This',
+      albumType: 'Single',
       summary: '',
       tracks: [
         { url: '/sponnMusic/tnt/this now this.wav', title: 'Thank You and Good Night' },
@@ -96,21 +80,50 @@ export default function MyMusic() {
       shortFilm: [
         { src: 'https://www.youtube.com/watch?v=1zlcipBv_ME&t=154s&ab_channel=BenSpooner', title: 'This Now This' },                
       ],
+      game: false,
     },
     {
-      src: '/images/sponnAlbumArtwork/wwf.jpg',
-      alt: 'When We Fell',
-      title: 'When We Fell',
+      src: '/images/sponnAlbumArtwork/ktma.png',
+      alt: 'Keep The Music Alive',
+      title: 'Keep The Music Alive',
+      albumType: 'Album',
       summary: '',
       tracks: [
-        { url: '/sponnMusic/wwf/when we fell', title: 'When We Fell' },
+        { url: '/sponnMusic/ktma/1. For The Taking.wav', title: 'For The Taking' },
+        { url: '/sponnMusic/ktma/2. All Change.wav', title: 'All Change' },
+        { url: '/sponnMusic/ktma/3. Apprehension.wav', title: 'Apprehension' },
+        { url: '/sponnMusic/ktma/4. Resolve.wav', title: 'Resolve' },
+        { url: '/sponnMusic/ktma/5. Crystalline.wav', title: 'Crystalline' },
+        { url: '/sponnMusic/ktma/6. Twilight.wav', title: 'Twilight' },
       ],
       transcription: [
-        { src: 'https://www.youtube.com/watch?v=sYrvUKESY2A&ab_channel=BenSpooner', title: 'When We Fell' },                
+        { src: 'https://www.youtube.com/watch?v=8JiFKQNVny0&ab_channel=BenSpooner', title: 'For The Taking' },                
       ],
-      shortFilm: [
-        { src: 'https://www.youtube.com/watch?v=XenuFH6qTdM&t=111s&ab_channel=BenSpooner', title: 'When We Fell' },                
+      shortFilm: false,
+      game: [{ src: 'https://sponn.itch.io/keep-the-music-alive', title: 'KTMA' }],  
+    },
+    {
+      src: '/images/sponnAlbumArtwork/lwr.jpg',
+      alt: 'Long Way Round',
+      title: 'Long Way Round',
+      albumType: 'Album',
+      summary: '',
+      tracks: [
+        { url: '/sponnMusic/lwr/01 - the odds.wav', title: 'The Odds' },
+        { url: '/sponnMusic/lwr/02 - strinde.wav', title: 'Strinde' },
+        { url: '/sponnMusic/lwr/03 - in the dark.wav', title: 'In The Dark' },
+        { url: '/sponnMusic/lwr/04 - northern lights.wav', title: 'Northern Lights' },
+        { url: '/sponnMusic/lwr/05 - coco.wav', title: 'Coco' },
+        { url: '/sponnMusic/lwr/06 - welcome to the world.wav', title: 'Welcome To The World' },
+        { url: '/sponnMusic/lwr/07 - salvation.wav', title: 'Salvation' },
+        { url: '/sponnMusic/lwr/08 - sur.wav', title: 'Sur' },
+        { url: '/sponnMusic/lwr/09 - through fingers.wav', title: 'Through Fingers' },
+        { url: '/sponnMusic/lwr/10 - one thing that i need.wav', title: 'One Thing That I Need' },
+        { url: '/sponnMusic/lwr/11 - thank you and good night.wav', title: 'Thank You and Good Night' },
       ],
+      transcription: false,
+      shortFilm: false,
+      game: false,
     },
   ];
 
@@ -119,26 +132,22 @@ export default function MyMusic() {
   const [filteredAlbums, setFilteredAlbums] = useState(albums);
 
   useEffect(() => {
-    // Filter albums based on the active view
-    const filterAlbums = () => {
-      switch (activeView) {
-        case 'transcriptions':
-          return albums.filter(album => album.transcription && album.transcription.length > 0);
-        case 'shortFilms':
-          return albums.filter(album => album.shortFilm && album.shortFilm.length > 0);
-        default:
-          return albums;
-      }
-    };
-
-    setFilteredAlbums(filterAlbums());
-    setCurrentAlbumIndex(0); // Reset index when changing views
+    // Reset index when changing views
+    setCurrentAlbumIndex(0);
   }, [activeView]);
 
   const currentAlbum = filteredAlbums[currentAlbumIndex];
 
   return (
     <Section id="myMusic">
+      <SmallScreenSection spaceY='space-y-2'>
+        <SlideFadeIn direction="right">
+          <h1 className="text-center font-gopher-mono-semi opacity-40 color-blue text-6xl">myMusic</h1>
+        </SlideFadeIn>
+      </SmallScreenSection>
+
+      {/* ------------------------------------------------------------------------------------------ */}
+
       <LargeScreenSection paddingX='px-32'>
         {/* Left Column - Text */}
         <div className="flex flex-col w-2/3">

@@ -4,13 +4,14 @@ import Modal from './Modal';
 import Breadcrumb from '@/app/components/utilityComponents/Breadcrumb';
 import VideoModal from './VideoModal'; // Import the new VideoModal component
 
-const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, setActiveView, activeView }) => {
+const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5); // Default volume at 50%
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [currentVideoId, setCurrentVideoId] = useState(null);
+  const [activeView, setActiveView] = useState('listen'); // Move this state here
   const audioRef = useRef(new Audio());
 
   const currentAlbum = albums[currentAlbumIndex];
@@ -44,15 +45,6 @@ const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, setActiveView
     }
   };
 
-  const handleVolumeChange = (event) => {
-    const newVolume = event.target.value;
-    setVolume(newVolume);
-    audioRef.current.volume = newVolume;
-
-    // Update the CSS variable for the progress
-    event.target.style.setProperty('--progress', `${newVolume * 100}%`);
-  };
-
   useEffect(() => {
     const handlePause = () => setIsPlaying(false);
     const handlePlay = () => setIsPlaying(true);
@@ -81,31 +73,6 @@ const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, setActiveView
 
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="flex justify-between w-full border-b pb-4">
-        <button
-          onClick={() => setActiveView('listen')}
-          className={`text-sm px-4 py-2 font-gopher-mono ${activeView === 'listen' ? 'outline bg-white text-black' : 'bg-black text-white hover:bg-white hover:outline hover:text-black'}`}
-        >
-          Tracks
-        </button>
-        {albums.some(album => album.transcription && album.transcription.length > 0) && (
-          <button
-            onClick={() => setActiveView('transcriptions')}
-            className={`text-sm px-4 py-2 font-gopher-mono ${activeView === 'transcriptions' ? 'outline bg-white text-black' : 'bg-black text-white hover:bg-white hover:outline hover:text-black'}`}
-          >
-            Transcriptions
-          </button>
-        )}
-        {albums.some(album => album.shortFilm && album.shortFilm.length > 0) && (
-          <button
-            onClick={() => setActiveView('shortFilms')}
-            className={`text-sm px-4 py-2 font-gopher-mono ${activeView === 'shortFilms' ? 'outline bg-white text-black' : 'bg-black text-white hover:bg-white hover:outline hover:text-black'}`}
-          >
-            Short Films
-          </button>
-        )}
-      </div>
-
       <div
         className="relative group border-3 border-thick-border-gray cursor-pointer overflow-hidden"
         onClick={openModal}
@@ -127,7 +94,10 @@ const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, setActiveView
       <Breadcrumb
         currentIndex={currentAlbumIndex}
         itemCount={albums.length}
-        onBreadcrumbClick={setCurrentAlbumIndex}
+        onBreadcrumbClick={(index) => {
+          setCurrentAlbumIndex(index);
+          setActiveView('listen'); // Reset to the default view
+        }}
       />
 
       {isModalOpen && currentAlbum && (
@@ -139,7 +109,7 @@ const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, setActiveView
             >
               Tracks
             </button>
-            {albums.some(album => album.transcription && album.transcription.length > 0) && (
+            {currentAlbum.transcription && currentAlbum.transcription.length > 0 && (
               <button
                 onClick={() => setActiveView('transcriptions')}
                 className={`text-sm px-4 py-2 font-gopher-mono ${activeView === 'transcriptions' ? 'outline bg-white text-black' : 'bg-black text-white hover:bg-white hover:outline hover:text-black'}`}
@@ -147,12 +117,20 @@ const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, setActiveView
                 Transcriptions
               </button>
             )}
-            {albums.some(album => album.shortFilm && album.shortFilm.length > 0) && (
+            {currentAlbum.shortFilm && currentAlbum.shortFilm.length > 0 && (
               <button
                 onClick={() => setActiveView('shortFilms')}
                 className={`text-sm px-4 py-2 font-gopher-mono ${activeView === 'shortFilms' ? 'outline bg-white text-black' : 'bg-black text-white hover:bg-white hover:outline hover:text-black'}`}
               >
                 Short Films
+              </button>
+            )}
+            {currentAlbum.game && currentAlbum.game.length > 0 && (
+              <button
+                onClick={() => setActiveView('games')}
+                className={`text-sm px-4 py-2 font-gopher-mono ${activeView === 'games' ? 'outline bg-white text-black' : 'bg-black text-white hover:bg-white hover:outline hover:text-black'}`}
+              >
+                Games
               </button>
             )}
           </div>
@@ -168,7 +146,8 @@ const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, setActiveView
               />
             </div>
             <div className="flex-1 pl-4">
-              <h2 className="text-2xl font-bold my-4">{currentAlbum.title}</h2>
+              <h2 className="text-2xl font-bold mt-4">{currentAlbum.title}</h2>
+              <h3 className="text-sm font-bold mb-4">{currentAlbum.albumType}</h3>
 
               {/* Listen to the Music Tracks */}
               {activeView === 'listen' && (
@@ -183,28 +162,9 @@ const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, setActiveView
                           {currentTrack === track && isPlaying ? 'pause' : 'play'}
                         </button>
                     </div>
-                  ))}
-                  {/* Volume Slider */}
-                  <div className="pt-2 border-t">
-                    <p className="text-xs text-center font-gopher-mono">Volume Slider</p>
-                    <input
-                      type="range"
-                      id="volume"
-                      name="volume"
-                      min="0"
-                      max="1"
-                      step="0.01"
-                      value={volume}
-                      onChange={handleVolumeChange}
-                      className="w-full"
-                      style={{ backgroundColor: 'transparent' }}
-                    />
-                  </div>
+                  ))}                  
                 </div>
-                
               )}
-
-              
 
               {/* Watch the Transcriptions */}
               {activeView === 'transcriptions' && currentAlbum.transcription && (
@@ -238,13 +198,36 @@ const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, setActiveView
                     </div>
                   ))}
                 </div>
-              )}              
+              )}
+
+              {/*Play the Game */}
+              {activeView === 'games' && currentAlbum.game && (
+                <div className="overflow-y-auto" style={{ maxHeight: '10rem' }}>
+                  {currentAlbum.game.map((game, index) => (
+                    <div key={index} className="my-2 flex items-center justify-between">
+                      <h3 className="text-lg">{`- ${game.title}`}</h3>     
+                      <button
+                        onClick={() => {
+                          console.log(`Opening game URL: ${game.src}`);
+                          window.open(game.src, '_blank');
+                        }}
+                        className="mr-2 text-xs bg-black text-white px-4 py-2 hover:bg-white hover:outline hover:text-black font-gopher-mono mr-2"
+                      >
+                        Play Game
+                      </button>                 
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
           <Breadcrumb
             currentIndex={currentAlbumIndex}
             itemCount={albums.length}
-            onBreadcrumbClick={setCurrentAlbumIndex}
+            onBreadcrumbClick={(index) => {
+              setCurrentAlbumIndex(index);
+              setActiveView('listen'); // Reset to the default view
+            }}
           />
         </Modal>
       )}
