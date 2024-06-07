@@ -142,7 +142,23 @@ export default function MyMusic() {
     <Section id="myMusic">
       <SmallScreenSection spaceY='space-y-2'>
         <SlideFadeIn direction="right">
-          <h1 className="text-center font-gopher-mono-semi opacity-40 color-blue text-6xl">myMusic</h1>
+          <h1 className="text-center font-gopher-mono-semi opacity-40 color-blue text-8xl">myMusic</h1>
+        </SlideFadeIn>
+
+        <SlideFadeIn direction="right" className="color-dark-blue font-gopher-mono underline text-decoration-color text-2xl tracking-largep whitespace-nowrap">
+          <p className="">
+            <TypewriterEffect text={currentAlbum.title} />
+          </p>
+        </SlideFadeIn>
+
+        <SlideFadeIn className="max-w-1/3" direction="right">
+          <Albums
+              currentAlbumIndex={currentAlbumIndex}
+              setCurrentAlbumIndex={setCurrentAlbumIndex}
+              albums={filteredAlbums}
+              setActiveView={setActiveView}
+              activeView={activeView}
+            />
         </SlideFadeIn>
       </SmallScreenSection>
 
