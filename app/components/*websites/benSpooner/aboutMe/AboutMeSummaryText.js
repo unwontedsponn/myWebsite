@@ -63,11 +63,11 @@ export default function AboutMeSummaryText({ }) {
   return (
     <div className="flex flex-row pt-6 max-w-3xl" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
 
-      <div className="flex flex-col w-full text-left xl:text-right px-2">
+      <div className="flex flex-col w-full text-center xl:text-right px-2">
         <div className="flex">
           <Arrow direction="left" onClick={previousPage} width={50} height={50} />
           <SlideFadeIn direction="up">
-            <div className="color-dark font-gopher-mono text-xs sm:text-sm cursor-pointer">
+            <div className="color-dark font-gopher-mono text-xs md:text-sm cursor-pointer">
               {textOptions[textIndex]}
             </div>
           </SlideFadeIn>

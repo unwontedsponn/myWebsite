@@ -1,5 +1,4 @@
 import ResponsiveVisibility from '@/app/components/utilityComponents/ResponsiveVisibility';
-import { imageAttributes } from './AboutMeContent';
 import Section from '../../../utilityComponents/Section';
 import SmallScreenSection from '../../../utilityComponents/SmallScreenSection';
 import LargeScreenSection from '../../../utilityComponents/LargeScreenSection';
@@ -7,7 +6,6 @@ import AboutMeSummaryText from './AboutMeSummaryText';
 import Image from 'next/image';
 import TypewriterEffect from '../../../utilityComponents/TypewriterEffect';
 import SlideFadeIn from '../../../utilityComponents/SlideFadeIn';
-import Arrow from '@/app/components/utilityComponents/Arrow';
 
 export default function AboutMe() {
 
@@ -21,9 +19,16 @@ export default function AboutMe() {
           </SlideFadeIn>
           
 
-          <SlideFadeIn className={`max-w-xs`} direction="left"> 
-            <ResponsiveVisibility minHeight={760}>
-              <Image {...imageAttributes}/>
+          <SlideFadeIn className={`max-w-xs xs:hidden`} direction="left"> 
+            <ResponsiveVisibility minHeight={760} minWidth={550}>
+              <Image 
+                id='piano-img'
+                src='/images/piano.png'
+                alt="Piano"
+                width={500}
+                height={500}
+                className="opacity-10"
+              />
             </ResponsiveVisibility>
           </SlideFadeIn>
 
@@ -47,7 +52,14 @@ export default function AboutMe() {
                             
             {/* Right Column */}
             <SlideFadeIn className="w-1/3" direction="right"> 
-              <Image {...imageAttributes} />
+              <Image 
+                id='piano-img'
+                src='/images/piano.png'
+                alt="Piano"
+                width={500}
+                height={500}
+                className="opacity-10"
+              />
             </SlideFadeIn>
 
         </LargeScreenSection>
