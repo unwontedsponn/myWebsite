@@ -4,7 +4,7 @@ import Modal from './Modal';
 import Breadcrumb from '@/app/components/utilityComponents/Breadcrumb';
 import VideoModal from './VideoModal'; // Import the new VideoModal component
 
-const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums }) => {
+const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums, className }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -74,17 +74,17 @@ const Albums = ({ currentAlbumIndex, setCurrentAlbumIndex, albums }) => {
   return (
     <div className="w-full flex flex-col items-center">
       <div
-        className="relative group border-3 border-thick-border-gray cursor-pointer overflow-hidden"
+        className={`relative group border-3 border-thick-border-gray cursor-pointer overflow-hidden ${className}`}
         onClick={openModal}
       >
         <Image
           src={currentAlbum.src}
           alt={currentAlbum.alt}
-          layout="responsive"
+          // layout="responsive"
           width={500}
           height={500}
           objectFit="cover"
-          className="transition-transform duration-300 group-hover:scale-105"
+          className={`transition-transform duration-300 group-hover:scale-105`}
         />
         <div className="absolute inset-0 bg-gray-800 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center flex-col">
           <p className="text-white text-5xl font-gopher-mono">{`Listen Now`}</p>

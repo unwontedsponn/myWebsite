@@ -151,13 +151,14 @@ export default function MyMusic() {
           </p>
         </SlideFadeIn>
 
-        <SlideFadeIn className="max-w-1/3" direction="right">
+        <SlideFadeIn className="" direction="right">
           <Albums
               currentAlbumIndex={currentAlbumIndex}
               setCurrentAlbumIndex={setCurrentAlbumIndex}
               albums={filteredAlbums}
               setActiveView={setActiveView}
               activeView={activeView}
+              className='w-2/3'
             />
         </SlideFadeIn>
       </SmallScreenSection>
