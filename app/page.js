@@ -1,6 +1,5 @@
 "use client"
 import { useState } from 'react';
-import './globals.css';
 import Header from "./components/*websites/sharedSections/Header/Header";
 import Sections from './Sections';
 import Footer from './components/*websites/sharedSections/Footer/Footer';

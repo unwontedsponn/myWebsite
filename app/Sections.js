@@ -4,26 +4,29 @@ import MyBook from './components/*websites/benSpooner/myBook/MyBook';
 import Sponn from './components/*websites/sponn/sponnHomepage/Sponn';
 import MyMusic from './components/*websites/sponn/myMusic/myMusic';
 import MyScores from './components/*websites/sponn/myScores/MyScores';
-import PktTutor from './components/*websites/pktT/PktTutor';
 
-// This object determines which components to render based on the current section selected.
 const sectionComponents = {
-  benSpooner: [Homepage, AboutMe, MyBook], 
-  sponn: [Sponn, MyMusic, MyScores], 
-  // pktTutor: [PktTutor],  
+  benSpooner: [
+    { id: 'benSpooner', Component: Homepage },
+    { id: 'aboutMe', Component: AboutMe },
+    { id: 'myBook', Component: MyBook }
+  ],
+  sponn: [
+    { id: 'sponn', Component: Sponn },
+    { id: 'myMusic', Component: MyMusic },
+    { id: 'myScores', Component: MyScores }
+  ],
 };
 
-// Takes the current section and renders the corresponding components.
 export default function Sections({ currentSection }) {
-  // Retrieves the array of components for the current section or defaults to [Homepage] if undefined.
-  const Components = sectionComponents[currentSection] || [Homepage];
+  const Components = sectionComponents[currentSection] || [{ id: 'benSpooner', Component: Homepage }];
 
-  // Maps over the array of components and renders each as a React element.
-  // The 'key' prop is used here to ensure React can manage the list of components efficiently.
   return (
     <>
-      {Components.map((Component, index) => (
-        <Component key={index} />  // Render each component with a unique key
+      {Components.map(({ id, Component }, index) => (
+        <section key={index} id={id}>
+          <Component />
+        </section>
       ))}
     </>
   );

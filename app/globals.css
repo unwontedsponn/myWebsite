@@ -67,7 +67,7 @@ html {scroll-behavior: smooth;}
 * :Hover and Text decoration
 */
 /*--------------------------------------------------------------------------------------------------------------------*/
-#benspoonerNav:hover, #aboutNav:hover, #bookNav:hover, #gameNav:hover, #tutorNav:hover, #contactNav:hover, #play-footer:hover, .youtube:hover {
+#homepageNav:hover, #aboutNav:hover, #bookNav:hover, #gameNav:hover, #tutorNav:hover, #contactNav:hover, #play-footer:hover, .youtube:hover {
   color: #e39ba6;
   text-decoration: underline;
   text-decoration-color: #c15564;
