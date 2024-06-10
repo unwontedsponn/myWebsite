@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Breadcrumb from "../../../utilityComponents/Breadcrumb";
 import SlideFadeIn from "../../../utilityComponents/SlideFadeIn";
+import Arrow from "@/app/components/utilityComponents/Arrow";
 
 export default function AboutMeSummaryText({ }) {
   const [textIndex, setTextIndex] = useState(0); // State to control which text is shown
@@ -63,14 +64,15 @@ export default function AboutMeSummaryText({ }) {
     <div className="flex flex-row pt-6 max-w-3xl" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
 
       <div className="flex flex-col w-full text-left xl:text-right px-2">
-        <SlideFadeIn direction="up">
-          <div 
-            className="color-dark font-gopher-mono text-xs sm:text-sm cursor-pointer"
-            // onClick={nextPage}
-          >
-            {textOptions[textIndex]}
-          </div>
-        </SlideFadeIn>
+        <div className="flex">
+          <Arrow direction="left" onClick={previousPage} width={50} height={50} />
+          <SlideFadeIn direction="up">
+            <div className="color-dark font-gopher-mono text-xs sm:text-sm cursor-pointer">
+              {textOptions[textIndex]}
+            </div>
+          </SlideFadeIn>
+          <Arrow direction="right" onClick={nextPage} width={50} height={50} />
+        </div>
         <SlideFadeIn direction="right">
           <Breadcrumb currentIndex={textIndex} itemCount={textOptions.length} onBreadcrumbClick={(index) => setTextIndex(index)}/>
         </SlideFadeIn>

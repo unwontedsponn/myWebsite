@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import Arrow from './Arrow';
+import Arrow from '../../../utilityComponents/Arrow';
 import { useState, useEffect } from 'react';
 import Contact from '../Contact/Contact';
 
