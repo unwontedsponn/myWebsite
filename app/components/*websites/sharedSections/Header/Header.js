@@ -12,7 +12,7 @@ export default function Header({ setCurrentSection }) {
 
   const textOptions = [
     { text: 'benSpooner', sectionId: 'benSpooner', navLinks: { link1: 'aboutMe', link2: 'myBook' } },
-    { text: 'sponn', sectionId: 'sponn', navLinks: { link1: 'myMusic', link2: 'myFilms' } },
+    { text: 'sponn', sectionId: 'sponn', navLinks: { link1: 'myMusic', link2: 'myScores' } },
     // { text: 'pktT', sectionId: 'pktTutor', url: '/pocket-tutor', navLinks: { link1: 'link1', link2: 'link2' } },
   ];
 
